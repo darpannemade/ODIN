@@ -171,3 +171,4 @@ MIT — feel free to fork, build, and improve!
 🧠 Authors
 BlockDAG Hackathon 2025
 Project: ODIN - AI NFT Marketplace
+Authors - darpannemade, ItzVirAj , prathameshc09 , Anster133Q
