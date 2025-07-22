@@ -1,0 +1,32 @@
+# General
+*.log
+*.zip
+*.tar.gz
+*.rar
+.DS_Store
+
+# Node.js (frontend)
+node_modules/
+dist/
+build/
+.cache/
+.env
+
+# Python (backend)
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# AI models / unused data
+*.pt
+*.bin
+*.ckpt
+artifacts/
+datasets/
+media/

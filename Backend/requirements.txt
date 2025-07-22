@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+tiktoken
+langchain
+faiss-cpu
+requests
+apscheduler
+web3
+eth-account
+transformers
+sentence-transformers
+torch
+numpy

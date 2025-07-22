@@ -1,0 +1,219 @@
+/* client/src/auth/Auth.css */
+.auth-wrapper {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;      /* ✅ Prevent horizontal scroll */
+  width: 100vw;            /* ✅ Ensure no element stretches it */
+  max-width: 100vw;
+  position: relative;
+}
+
+.odin-image-below {
+position: absolute;
+  bottom: -13rem;
+  left: 79%;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: 1047px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+}
+
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: white;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.auth-heading {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: Modrenize, sans-serif;
+}
+
+.auth-input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  outline: none;
+  font-family: "42dotSans", sans-serif;
+}
+
+.auth-submit {
+  background:#8e06e9;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Modrenize, sans-serif;
+  transition: 0.3s ease;
+}
+
+.auth-submit:hover {
+  background:#8e06e9;
+  
+  transform: scale(1.03);
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-family: "42dotSans", sans-serif;
+}
+
+.active-tab, .inactive-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "42dotSans", sans-serif;
+}
+
+.active-tab {
+  background: #ffffff0f;
+  color: #fff;
+}
+
+.inactive-tab {
+  background: transparent;
+  color: #bbb;
+  text-decoration: none;
+}
+
+
+.auth-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+}
+.auth-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000; /* or your gradient */
+  overflow: hidden;
+  z-index: 5; /* higher than image */
+}
+
+.auth-box {
+    position: relative;
+  z-index: 10; /* Add this */
+}
+
+.auth-box {
+background: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: -2rem;
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  color: #cbd5e1;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  background: transparent;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.auth-tab.active {
+  background: #1f1f30;
+  color: white;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+  justify-content: center;
+  font-family: Modrenize, sans-serif;
+}
+
+.auth-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+  font-family: "42dotSans", sans-serif;
+}
+
+.auth-form input {
+  width: 93%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: #1e1e2e;
+  border: 1px solid #333;
+  color: white;
+  font-size: 0.8rem;
+   padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  outline: none;
+  font-family: "42dotSans", sans-serif;
+}
+
+.auth-form input::placeholder {
+  color: #94a3b8;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #8e06e9;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: Modrenize, sans-serif;
+}
+
+.auth-btn:hover {
+  background-color: #a84af5;
+  transform: scale(1.03);
+}

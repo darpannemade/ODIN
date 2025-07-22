@@ -1,0 +1,29 @@
+.choose-box {
+  padding: 1.5rem;
+  background-color: #1f2937;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.choose-box:hover {
+  transform: translateY(-5px);
+}
+
+.choose-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.choose-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.choose-text {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}

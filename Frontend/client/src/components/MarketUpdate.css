@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.market-section {
+  background: black;
+  padding: 10rem 1rem;
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.market-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgb(27, 27, 27);
+  border: 1px solid rgba(172, 14, 235, 0.027);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(71, 71, 71, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.market-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f7f7f7;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-family: 'ONDER', sans-serif;
+}
+
+.market-table-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid #8b15fa;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-family: 'Modrenize', sans-serif;
+}
+
+.market-loading {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #9ca3af;
+}
+
+.market-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 0;
+  border-bottom: 1px solid #374151;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: '42dotSans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.market-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: scale(1.01);
+  border-radius: 8px;
+}
+
+.market-coin-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.market-coin-img {
+  width: 28px;
+  height: 28px;
+}
+
+.market-change {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.market-change.green {
+  color: #4ade80;
+}
+
+.market-change.red {
+  color: #f87171;
+}
+
+.market-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.market-pagination-button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-family: '42dotSans', sans-serif;
+}
+
+.market-pagination-button:hover {
+  background-color: #494364;
+}
+
+.active-page {
+  background-color: #9315fa;
+  color: black;
+}

@@ -1,0 +1,341 @@
+/* Base & Reset */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000000;
+  font-family: '42dotSans', sans-serif;
+  color: #d4caff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #1e1d1f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.mintnft-container {
+  min-height: 80vh;
+  position: relative;
+  padding: 1rem 1.5rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.main-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Titles */
+.page-title {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 12px #22222488;
+  font-family: "Modrenize", sans-serif;
+  margin-top: 7rem;
+}
+
+.minted-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #1c1b1d88;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Wallet bar */
+.wallet-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2c2e;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  color: #c5bfff;
+  font-weight: 600;
+  box-shadow: 0 0 15px #22164666;
+  margin-top: 7rem;
+  font-family: "42dotSans", sans-serif;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.disconnect-btn,
+.connect-btn {
+  background: #7a35d8;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.disconnect-btn:hover:not(:disabled),
+.connect-btn:hover {
+  background: #1c044d;
+}
+
+.disconnect-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.connect-prompt {
+  font-size: 1.1rem;
+  color: #f7f6fa;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Mint NFT Form */
+.mintnft-form {
+  background: #34333a;
+  padding: 1.6rem 2rem;
+  border-radius: 18px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 40px #120d2288;
+}
+
+.mintnft-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.3rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #eaeaeb;
+  font-family: "42dotSans", sans-serif;
+}
+
+.mintnft-form input[type="file"] {
+  margin-top: 0.6rem;
+}
+
+.mintnft-form input[type="text"],
+.mintnft-form input[type="number"],
+.mintnft-form textarea {
+  margin-top: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1f1e22;
+  color: #ffffff;
+  resize: vertical;
+  min-height: 36px;
+  outline-offset: 2px;
+  transition: box-shadow 0.2s ease;
+}
+
+.mintnft-form textarea {
+  min-height: 72px;
+}
+
+.mintnft-form input:focus,
+.mintnft-form textarea:focus {
+  box-shadow: 0 0 10px #100e13aa;
+  outline: none;
+}
+
+.mintnft-form button[type="submit"] {
+  background: #7a35d8;
+  border: none;
+  border-radius: 14px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.4rem;
+  transition: background 0.3s ease;
+  font-family: "Modrenize", sans-serif;
+}
+
+.mintnft-form button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mintnft-form button[type="submit"]:hover:not(:disabled) {
+  background: #7a35d8;
+}
+
+.preview-img {
+  display: block;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 14px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 30px #bb99ffcc;
+}
+
+.minted-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+}
+
+.nft-card {
+  background: #202027;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #00000099;
+  color: #18181a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nft-card img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+  filter: drop-shadow(0 0 10px #090018cc);
+}
+
+.nft-card h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  font-family: "Modrenize", sans-serif;
+      color: white;
+}
+
+.nft-card p {
+  font-size: 0.9rem;
+  color: #c9c1e7cc;
+  margin-bottom: 0.4rem;
+  min-height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nft-card span {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "42dotSans", sans-serif;
+}
+
+.nftname {
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .page-title,
+  .minted-title {
+    font-size: 1.7rem;
+  }
+
+  .wallet-bar {
+            flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 76%;
+        margin-left: -1.5rem;
+  }
+
+  .mintnft-form {
+    padding: 1.2rem;
+  }
+
+  .mintnft-form button[type="submit"] {
+    font-size: 1rem;
+  }
+
+  .minted-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .preview-img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  .connect-btn,
+  .disconnect-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mintnft-container,
+  .main-content {
+    padding: 1rem;
+  }
+
+  .page-title,
+  .minted-title {
+    font-size: 1.4rem;
+    margin-top: 4rem;
+  }
+
+  .mintnft-form {
+            padding: 2rem;
+        margin-right: 2rem;
+        transform: scale(0.9);
+    
+  }
+
+  .mintnft-form input,
+  .mintnft-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .minted-list {
+    grid-template-columns: 1fr;
+  }
+}

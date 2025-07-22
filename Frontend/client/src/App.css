@@ -1,0 +1,42 @@
+/* Reset + base layout */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #111827; /* dark bg */
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+/* Overall app wrapper */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content wrapper */
+main {
+  flex-grow: 1;
+    width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Ensure footer sticks to bottom */
+footer {
+  margin-top: auto;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7a35d8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0514;
+}

@@ -1,0 +1,366 @@
+/* Container */
+.mainui-container {
+  display: flex;
+  min-height: 100vh;
+  background: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.mainui-sidebar {
+  width: 420px;
+  background: rgba(25, 25, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 6rem 1.2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BIFROST Title */
+.mainui-title {
+  font-size: 2.3rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Subtitle */
+.mainui-subtitle {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+.mainui-subtitle2 {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: -15px;
+      margin-top: -18px;
+
+}
+/* MetaMask Logo */
+.mainui-metamask-logo {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 20px;
+}
+
+/* Separator */
+.mainui-separator {
+  width: 85%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+/* Wallet Card */
+.mainui-wallet-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 1.4rem;
+  margin-bottom: 1.8rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #03001e, #7303c0, #ec38bc, #fdeff9);
+  background-size: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wallet Header */
+.mainui-wallet-card-header {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Wallet Address Label */
+.mainui-wallet-label {
+  font-weight: 600;
+  color: #ffffffcc;
+  font-size: 1.2rem;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Wallet Address */
+.mainui-wallet-value {
+  color: #ffffff;
+  font-weight: 600;
+  word-break: break-word;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Wallet Footer: Updated Layout */
+.mainui-wallet-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Balance wrapper for label + value */
+.mainui-wallet-balance-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* Balance label */
+.mainui-wallet-balance-label {
+  font-size: 0.8rem;
+  color: #ffffffaa;
+  font-weight: 500;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Balance value */
+.mainui-wallet-balance-value {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Modrenize", sans-serif;
+}
+
+/* Toggle Button */
+.mainui-toggle-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ffffffcc;
+  transition: transform 0.2s ease;
+}
+
+.mainui-toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* FontAwesome icon inside toggle */
+.mainui-toggle-btn svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* Wallet Action Buttons */
+.mainui-wallet-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.mainui-wallet-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background 0.3s ease;
+    font-family: "Modrenize", sans-serif;
+}
+
+.mainui-wallet-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mainui-disconnect {
+  background: rgba(255, 0, 66, 0.2);
+    font-family: "Modrenize", sans-serif;
+}
+
+.mainui-disconnect:hover {
+  background: rgba(255, 0, 66, 0.35);
+}
+
+/* Connect Wallet Button */
+.mainui-connect-btn {
+  background: #6c00ff;
+  color: white;
+  padding: 0.7rem 1.1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  width: 100%;
+  max-width: 280px;
+  transition: background 0.3s ease;
+    font-family: "Modrenize", sans-serif;
+}
+
+.mainui-connect-btn:hover {
+  background: #4b00aa;
+}
+
+/* Sidebar Links */
+.mainui-links {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+    font-family: "42dotSans", sans-serif;
+}
+
+.mainui-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  transform-origin: left;
+}
+
+.mainui-link:hover {
+  background: rgba(255, 255, 255, 0.021);
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/* Icon */
+.mainui-link-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+}
+
+/* Admin Link Special */
+.mainui-admin-link {
+  background: rgba(255, 0, 85, 0.12);
+  border: 1px solid rgba(255, 0, 85, 0.2);
+}
+
+.mainui-admin-link:hover {
+  background: rgba(255, 0, 85, 0.25);
+  transform: translateX(5px) scale(1.03);
+}
+
+/* Marketplace Right Side */
+.mainui-marketplace {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: #121212;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .mainui-container {
+    flex-direction: column;
+  }
+
+  .mainui-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 1rem;
+    align-items: stretch;
+  }
+
+  .mainui-wallet-card {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+
+  .mainui-wallet-actions {
+    flex-direction: column;
+  }
+
+  .mainui-connect-btn {
+    max-width: 100%;
+  }
+
+  .mainui-links {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainui-wallet-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .mainui-toggle-btn {
+    align-self: flex-end;
+  }
+
+  .mainui-title {
+    font-size: 1.5rem;
+  }
+
+  .mainui-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .mainui-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .mainui-wallet-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+/* Mobile-only message */
+.mainui-mobile-message {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ffffffcc;
+  background: #1a1a1a;
+  font-family: '42dotSans', sans-serif;
+  display: none;
+      margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .mainui-sidebar {
+    display: none;
+  }
+
+  .mainui-mobile-message {
+    display: block;
+  }
+
+  .mainui-marketplace {
+    padding: 1.2rem 1rem;
+  }
+
+  .mainui-container {
+    flex-direction: column;
+  }
+}

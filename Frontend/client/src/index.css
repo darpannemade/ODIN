@@ -1,0 +1,68 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure full height for html, body, and root */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make sure that the main content fills the available height */
+.main-content {
+  min-height: calc(100vh - 10rem); /* Adjust according to your header/footer size */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prevent body from scrolling when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Layout structure for components */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Add padding/margin as needed but avoid pushing content offscreen */
+.section-wrapper {
+  padding: 1rem;
+  flex-grow: 1; /* Ensure the content grows to take full height */
+}
+
+/* Footer styles to keep it at the bottom */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+/* Ensure all sections are flexibly laid out */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
