@@ -206,9 +206,9 @@ MIT — feel free to fork, build, and improve!
 </a>
 
 <a href="https://github.com/prathameshc09">
-  <img src="https://avatars.githubusercontent.com/u/115701556?s=50&v=4">Prathamesh Chaudhari
+  <img src="https://avatars.githubusercontent.com/u/115701556?s=40&v=4">Prathamesh Chaudhari
 </a>
 
 <a href="https://github.com/Anster133Q">
-  <img src="https://avatars.githubusercontent.com/u/144792352?s=50&v=4">Aniket Shankarwar
+  <img src="https://avatars.githubusercontent.com/u/144792352?s=40&v=4">Aniket Shankarwar
 </a>
