@@ -93,6 +93,21 @@ PRIVATE_KEY=your-wallet-private-key
 PRIMORDIAL_RPC_URL=​https://rpc.awakening.bdagscan.com
 📜 Contract Deployment (BlockDAG Awakening Network Testnet)
 
+
+**Firebase Setup**
+
+Add Your Credentials by using Google Firebase -
+In ODIN/Frontend/client/src/auth/firebase.js
+const firebaseConfig = {
+  apiKey: "Your_apiKey",
+  authDomain: "Your_authDomain",
+  projectId: "Your_projectId",
+  storageBucket: "Your_storageBucket",
+  messagingSenderId: "Your_messagingSenderId",
+  appId: "Your_appId",
+};
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
