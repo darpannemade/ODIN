@@ -196,6 +196,6 @@ MIT — feel free to fork, build, and improve!
 
 # Authors -
 
-<a href="https://github.com/ItzVirAj">Viraj Mane
-  <img src="https://avatars.githubusercontent.com/u/127103914?s=50&v=4">
+<a href="https://github.com/ItzVirAj">
+  <img src="https://avatars.githubusercontent.com/u/127103914?s=50&v=4">Viraj Mane
 </a>
