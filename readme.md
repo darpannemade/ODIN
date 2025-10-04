@@ -196,6 +196,19 @@ MIT — feel free to fork, build, and improve!
 
 # Authors -
 
+<a href="https://github.com/darpannemade">
+  <img src="https://avatars.githubusercontent.com/u/73686650?s=50&v=4">Darpan Nemade
+</a>
+
+
 <a href="https://github.com/ItzVirAj">
   <img src="https://avatars.githubusercontent.com/u/127103914?s=50&v=4">Viraj Mane
+</a>
+
+<a href="https://github.com/prathameshc09">
+  <img src="https://avatars.githubusercontent.com/u/115701556?s=50&v=4">Prathamesh Chaudhari
+</a>
+
+<a href="https://github.com/Anster133Q">
+  <img src="https://avatars.githubusercontent.com/u/144792352?s=50&v=4">Aniket Shankarwar
 </a>
