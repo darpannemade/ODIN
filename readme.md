@@ -201,5 +201,5 @@ Authors - darpannemade, ItzVirAj , prathameshc09 , Anster133Q
 
 
 <a href="https://github.com/ItzVirAj">
-  <img src="https://avatars.githubusercontent.com/u/127103914?s=50v=4">
+  <img src="https://avatars.githubusercontent.com/u/127103914?s=10v=4">
 </a>
