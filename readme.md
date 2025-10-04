@@ -191,15 +191,11 @@ Tools	MetaMask, CoinGecko API
 📜 License
 MIT — feel free to fork, build, and improve!
 
-
-
-🧠 Authors
-BlockDAG Hackathon 2025
-Project: ODIN - AI NFT Marketplace
-Authors - darpannemade, ItzVirAj , prathameshc09 , Anster133Q
 ```
 
 
-<a href="https://github.com/ItzVirAj">
-  <img src="https://avatars.githubusercontent.com/u/127103914?s=10&v=4">
+# Authors -
+
+<a href="https://github.com/ItzVirAj">Viraj Mane
+  <img src="https://avatars.githubusercontent.com/u/127103914?s=50&v=4">
 </a>
