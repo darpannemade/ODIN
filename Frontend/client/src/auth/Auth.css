@@ -1,0 +1,148 @@
+/* Auth.css — Aether Forms */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--nav-height) + 2rem) 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.auth-card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+}
+
+.auth-header {
+  margin-bottom: 2.5rem;
+}
+
+.auth-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.auth-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+/* FORM OVERRIDES (Uses global index.css rules mostly) */
+.auth-form label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.auth-form input {
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .auth-form input {
+  background: rgba(255, 252, 245, 0.9);
+  color: var(--text-primary);
+  border-color: rgba(100, 80, 40, 0.2);
+}
+
+
+.w-full {
+  width: 100%;
+  justify-content: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+/* DIVIDER */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-surface);
+}
+
+.auth-divider span {
+  padding: 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* GOOGLE BUTTON */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-surface);
+}
+
+.btn-google svg {
+  color: currentColor;
+}
+
+.btn-google:hover {
+  background: var(--surface);
+  color: #fff;
+}
+
+/* FOOTER TEXT */
+.auth-footer-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.auth-link {
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+.text-violet.auth-link:hover {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 2.5rem 1.5rem;
+  }
+}

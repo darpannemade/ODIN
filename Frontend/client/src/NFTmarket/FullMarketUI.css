@@ -1,0 +1,159 @@
+/* FullMarketUI.css — Bifrost Gateway */
+
+.bifrost-layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  background: var(--bg-void);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .bifrost-layout {
+  background: var(--bg-primary);
+}
+
+/* SIDEBAR */
+.bifrost-sidebar {
+  width: 280px;
+  height: calc(100vh - var(--nav-height));
+  position: fixed;
+  left: 0;
+  top: var(--nav-height);
+  border-right: 1px solid var(--border-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  z-index: 10;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+}
+
+[data-theme="light"] .bifrost-sidebar {
+  background: rgba(242, 237, 228, 0.92);
+  border-right-color: var(--border-surface);
+}
+
+.sidebar-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.sidebar-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+.nav-group-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.5rem 0 0.75rem 0.5rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.sidebar-link .icon {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.sidebar-link:hover {
+  background: var(--aurora-subtle);
+  color: var(--text-primary);
+}
+
+.sidebar-link:hover .icon {
+  opacity: 1;
+}
+
+.sidebar-link.active {
+  background: var(--aurora-deep);
+  border-color: var(--aurora-dim);
+  color: var(--aurora-bright);
+}
+
+.sidebar-link.active .icon {
+  opacity: 1;
+}
+
+.sidebar-link.admin {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--violet-bright);
+}
+
+.sidebar-link.admin:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* MAIN CONTENT */
+.bifrost-main {
+  flex: 1;
+  margin-left: 280px;
+  /* offset sidebar */
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  height: calc(100vh - var(--nav-height));
+}
+
+/* MOBILE FALLBACK */
+.bifrost-mobile-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.bifrost-mobile-msg {
+  max-width: 400px;
+  padding: 3rem 2rem;
+}
+
+@media (max-width: 900px) {
+  .bifrost-layout {
+    flex-direction: column;
+  }
+
+  .bifrost-sidebar {
+    display: none;
+  }
+
+  .bifrost-main {
+    margin-left: 0;
+  }
+}

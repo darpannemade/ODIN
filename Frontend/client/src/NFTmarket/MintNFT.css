@@ -1,0 +1,269 @@
+/* MintNFT.css — Aether Forge */
+
+.mint-page {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + 4rem) 0 6rem;
+  background: var(--bg-void);
+}
+
+.mint-container {
+  position: relative;
+  z-index: 2;
+}
+
+.mint-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.mint-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* CONNECT CARD */
+.mint-connect-card {
+  border: 1px solid var(--border-surface);
+}
+
+.pulse-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WALLET STATUS BAR */
+.wallet-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-surface);
+}
+
+.wallet-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  border: 1px solid var(--border-surface);
+}
+
+.address {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.rgb-success {
+  background: var(--success);
+  box-shadow: 0 0 10px var(--success);
+}
+
+/* FORM STYLES */
+.mint-form-area {
+  padding: 2.5rem;
+  border: 1px solid var(--border-surface);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.mint-form input[type="text"],
+.mint-form input[type="number"],
+.mint-form textarea {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1.25rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.input-with-icon input {
+  padding-left: 3rem;
+}
+
+/* UPLOAD ZONE */
+.upload-zone {
+  border: 2px dashed var(--border-surface);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload-zone:hover {
+  border-color: var(--aurora-dim);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.upload-zone.has-image {
+  border-style: solid;
+  padding: 0;
+}
+
+.upload-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.upload-prompt p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.preview-container {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.img-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.preview-container:hover .preview-overlay {
+  opacity: 1;
+}
+
+.preview-overlay span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+}
+
+/* SUCCESS / RIGHT AREA */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.minted-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.mint-success-card {
+  padding: 1rem;
+  gap: 1.5rem;
+  align-items: center;
+  border: 1px solid var(--border-surface);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mint-success-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mint-success-info h4 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-right-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mint-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .mint-form-area {
+    padding: 1.5rem;
+  }
+
+  .upload-zone {
+    border-radius: var(--radius-md);
+  }
+}

@@ -1,0 +1,349 @@
+/* WalletPage.css — Cosmic Treasury */
+
+.wallet-page {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + 4rem) 0 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+.wallet-container {
+  max-width: 1000px;
+  position: relative;
+  z-index: 2;
+}
+
+.wallet-header {
+  margin-bottom: 4rem;
+}
+
+.wallet-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.wallet-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==== CONNECT CARD ==== */
+.connect-card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metamask-logo-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid var(--aurora-dim);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.wallet-logo-img {
+  width: 80px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+
+.connect-card h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.wallet-error {
+  margin-top: 1.5rem;
+  color: var(--error);
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ==== CONNECTED GRID ==== */
+.wallet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.wallet-card {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.wallet-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.wallet-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+/* NETWORK BADGE */
+.network-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.network-badge.active {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.network-badge.error {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--error);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.network-warning {
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--error);
+  margin-bottom: 2rem;
+}
+
+.network-warning p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* BALANCE INFO DISPLAY */
+.balance-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.balance-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.eth-icon-sm {
+  width: 24px;
+  height: auto;
+  align-self: center;
+}
+
+.balance-value {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.balance-currency {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.address-box {
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .address-box {
+  background: rgba(255, 252, 245, 0.8);
+  border: 1px solid rgba(100, 80, 40, 0.12);
+}
+
+
+/* SEND CARD FORM */
+.send-form label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1.25rem;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  padding-left: 3.5rem;
+  font-size: 1rem;
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .input-with-icon input {
+  background: rgba(255, 252, 245, 0.9);
+  border-color: rgba(100, 80, 40, 0.2);
+}
+
+
+.amount-quick-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btn-quick {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-surface);
+}
+
+.btn-quick:hover {
+  background: var(--aurora-subtle);
+  color: var(--aurora);
+  border-color: var(--aurora-dim);
+}
+
+/* Loading Spinner */
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+}
+
+.spinner .path {
+  stroke: rgba(255, 255, 255, 0.8);
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Custom Toast styles for wallet page */
+.aether-toast {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-surface) !important;
+  box-shadow: var(--shadow-deep) !important;
+  backdrop-filter: blur(12px) !important;
+  font-family: var(--font-body) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .wallet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .wallet-page {
+    padding-top: 6rem;
+  }
+
+  .wallet-card {
+    padding: 1.5rem;
+  }
+
+  .connect-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .balance-value {
+    font-size: 2.5rem;
+  }
+}

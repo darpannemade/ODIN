@@ -1,0 +1,5337 @@
+BIPs (Bitcoin Improvement Proposals)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BIPs 
+bitcoin improvement proposals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bitcoin Improvement Proposals
+
+
+People wishing to submit BIPs, first should propose their idea or document to the 
+bitcoin-dev@lists.linuxfoundation.org
+ mailing list (do 
+not
+ assign a number - read 
+BIP 2
+ for the full process). After discussion, please open a
+    PR. After copy-editing and acceptance, it will be published here.
+
+
+
+We are fairly liberal with approving BIPs, and try not to be too involved in decision making on behalf of the
+    community. The exception is in very rare cases of dispute resolution when a decision is contentious and cannot be
+    agreed upon. In those cases, the conservative option will always be preferred.
+
+
+
+Having a BIP here does not make it a formally accepted standard until its status becomes Final or Active.
+
+
+
+Those proposing changes should consider that ultimately consent may rest with the consensus of the Bitcoin users (see
+    also: 
+economic majority
+).
+
+
+
+
+
+
+
+
+
+#
+
+
+Title
+
+
+Layer
+
+
+Status
+
+
+Type
+
+
+Owner
+
+
+
+
+
+
+
+
+
+
+1
+
+
+BIP Purpose and Guidelines
+
+
+
+
+Replaced
+
+
+Process
+
+
+
+
+Amir Taaki
+
+
+
+
+
+
+
+
+2
+
+
+BIP process, revised
+
+
+
+
+Active
+
+
+Process
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+3
+
+
+Updated BIP Process
+
+
+
+
+Proposed
+
+
+Process
+
+
+
+
+Murch
+
+
+
+
+
+
+
+
+8
+
+
+Version bits with lock-in by height
+
+
+
+
+Draft
+
+
+Informational
+
+
+
+
+Shaolin Fry
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+9
+
+
+Version bits with timeout and delay
+
+
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Peter Todd
+
+
+Greg Maxwell
+
+
+Rusty Russell
+
+
+
+
+
+
+
+
+10
+
+
+Multi-Sig Transaction Distribution
+
+
+Applications
+
+
+Withdrawn
+
+
+Informational
+
+
+
+
+Alan Reiner
+
+
+
+
+
+
+
+
+11
+
+
+M-of-N Standard Transactions
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+12
+
+
+OP_EVAL
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+13
+
+
+Address Format for pay-to-script-hash
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+14
+
+
+Protocol Version and User Agent
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Amir Taaki
+
+
+Patrick Strateman
+
+
+
+
+
+
+
+
+15
+
+
+Aliases
+
+
+Applications
+
+
+Deferred
+
+
+Standards Track
+
+
+
+
+Amir Taaki
+
+
+
+
+
+
+
+
+16
+
+
+Pay to Script Hash
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+17
+
+
+OP_CHECKHASHVERIFY (CHV)
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+18
+
+
+hashScriptCheck
+
+
+Consensus (soft fork)
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+19
+
+
+M-of-N Standard Transactions (Low SigOp)
+
+
+Applications
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+20
+
+
+URI Scheme
+
+
+Applications
+
+
+Replaced
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+21
+
+
+URI Scheme
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Nils Schneider
+
+
+Matt Corallo
+
+
+
+
+
+
+
+
+22
+
+
+getblocktemplate - Fundamentals
+
+
+API/RPC
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+23
+
+
+getblocktemplate - Pooled Mining
+
+
+API/RPC
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+30
+
+
+Duplicate transactions
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+31
+
+
+Pong message
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Mike Hearn
+
+
+
+
+
+
+
+
+32
+
+
+Hierarchical Deterministic Wallets
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+33
+
+
+Stratized Nodes
+
+
+Peer Services
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Amir Taaki
+
+
+
+
+
+
+
+
+34
+
+
+Block v2, Height in Coinbase
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+35
+
+
+mempool message
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Jeff Garzik
+
+
+
+
+
+
+
+
+36
+
+
+Custom Services
+
+
+Peer Services
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Stefan Thomas
+
+
+
+
+
+
+
+
+37
+
+
+Connection Bloom filtering
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Mike Hearn
+
+
+Matt Corallo
+
+
+
+
+
+
+
+
+38
+
+
+Passphrase-protected private key
+
+
+Applications
+
+
+Draft (Some confusion applies
+
+
+Standards Track
+
+
+
+
+Mike Caldwell
+
+
+Aaron Voisine
+
+
+
+
+
+
+
+
+39
+
+
+Mnemonic code for generating deterministic keys
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Marek Palatinus
+
+
+Pavol Rusnak
+
+
+Aaron Voisine
+
+
+Sean Bowe
+
+
+
+
+
+
+
+
+42
+
+
+A finite monetary supply for Bitcoin
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+43
+
+
+Purpose Field for Deterministic Wallets
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Marek Palatinus
+
+
+Pavol Rusnak
+
+
+
+
+
+
+
+
+44
+
+
+Multi-Account Hierarchy for Deterministic Wallets
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Marek Palatinus
+
+
+Pavol Rusnak
+
+
+
+
+
+
+
+
+45
+
+
+Structure for Deterministic P2SH Multisignature Wallets
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Manuel Araoz
+
+
+Ryan X. Charles
+
+
+Matias Alejo Garcia
+
+
+
+
+
+
+
+
+46
+
+
+Address Scheme for Timelocked Fidelity Bonds
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Chris Belcher
+
+
+Thebora Kompanioni
+
+
+
+
+
+
+
+
+47
+
+
+Reusable Payment Codes for Hierarchical Deterministic Wallets
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Justus Ranvier
+
+
+
+
+
+
+
+
+48
+
+
+Multi-Script Hierarchy for Multi-Sig Wallets
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Fontaine
+
+
+
+
+
+
+
+
+49
+
+
+Derivation scheme for P2WPKH-nested-in-P2SH based accounts
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Daniel Weigl
+
+
+
+
+
+
+
+
+50
+
+
+March 2013 Chain Fork Post-Mortem
+
+
+
+
+Final
+
+
+Informational
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+52
+
+
+Durable, Low Energy Bitcoin PoW
+
+
+Consensus (hard fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Michael Dubrovsky
+
+
+Bogdan Penkovsky
+
+
+
+
+
+
+
+
+53
+
+
+Disallow 64-byte transactions
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Chris Stewart
+
+
+
+
+
+
+
+
+54
+
+
+Consensus Cleanup
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Antoine Poinsot
+
+
+Matt Corallo
+
+
+
+
+
+
+
+
+60
+
+
+Fixed Length "version" Message (Relay-Transactions Field)
+
+
+Peer Services
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Amir Taaki
+
+
+
+
+
+
+
+
+61
+
+
+Reject P2P message
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+62
+
+
+Dealing with malleability
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+64
+
+
+getutxo message
+
+
+Peer Services
+
+
+Obsolete
+
+
+Standards Track
+
+
+
+
+Mike Hearn
+
+
+
+
+
+
+
+
+65
+
+
+OP_CHECKLOCKTIMEVERIFY
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Peter Todd
+
+
+
+
+
+
+
+
+66
+
+
+Strict DER signatures
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+67
+
+
+Deterministic Pay-to-script-hash multi-signature addresses through public key sorting
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Thomas Kerin
+
+
+Jean-Pierre Rupp
+
+
+Ruben de Vries
+
+
+
+
+
+
+
+
+68
+
+
+Relative lock-time using consensus-enforced sequence numbers
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Mark Friedenbach
+
+
+BtcDrak
+
+
+Nicolas Dorier
+
+
+kinoshitajona
+
+
+
+
+
+
+
+
+69
+
+
+Lexicographical Indexing of Transaction Inputs and Outputs
+
+
+Applications
+
+
+Proposed
+
+
+Informational
+
+
+
+
+Kristov Atlas
+
+
+
+
+
+
+
+
+70
+
+
+Payment Protocol
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+Mike Hearn
+
+
+
+
+
+
+
+
+71
+
+
+Payment Protocol MIME types
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+72
+
+
+bitcoin
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+73
+
+
+Use "Accept" header for response type negotiation with Payment Request URLs
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Stephen Pair
+
+
+
+
+
+
+
+
+74
+
+
+Allow zero value OP_RETURN in Payment Protocol
+
+
+Applications
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Toby Padilla
+
+
+
+
+
+
+
+
+75
+
+
+Out of Band Address Exchange using Payment Protocol Encryption
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Justin Newton
+
+
+Matt David
+
+
+Aaron Voisine
+
+
+James MacWhyte
+
+
+
+
+
+
+
+
+77
+
+
+Async Payjoin
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Dan Gould
+
+
+Yuval Kogman
+
+
+
+
+
+
+
+
+78
+
+
+A Simple Payjoin Proposal
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Nicolas Dorier
+
+
+
+
+
+
+
+
+79
+
+
+Bustapay :
+
+
+Applications
+
+
+Replaced
+
+
+Informational
+
+
+
+
+Ryan Havar
+
+
+
+
+
+
+
+
+80
+
+
+Hierarchy for Non-Colored Voting Pool Deterministic Multisig Wallets
+
+
+
+
+Deferred
+
+
+Informational
+
+
+
+
+Justus Ranvier
+
+
+Jimmy Song
+
+
+
+
+
+
+
+
+81
+
+
+Hierarchy for Colored Voting Pool Deterministic Multisig Wallets
+
+
+
+
+Deferred
+
+
+Informational
+
+
+
+
+Justus Ranvier
+
+
+Jimmy Song
+
+
+
+
+
+
+
+
+83
+
+
+Dynamic Hierarchical Deterministic Key Trees
+
+
+Applications
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Eric Lombrozo
+
+
+
+
+
+
+
+
+84
+
+
+Derivation scheme for P2WPKH based accounts
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pavol Rusnak
+
+
+
+
+
+
+
+
+85
+
+
+Deterministic Entropy From BIP32 Keychains
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Ethan Kosakovsky
+
+
+Aneesh Karve
+
+
+
+
+
+
+
+
+86
+
+
+Key Derivation for Single Key P2TR Outputs
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+87
+
+
+Hierarchy for Deterministic Multisig Wallets
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Robert Spigler
+
+
+
+
+
+
+
+
+88
+
+
+Hierarchical Deterministic Path Templates
+
+
+Applications
+
+
+Proposed
+
+
+Informational
+
+
+
+
+Dmitry Petukhov
+
+
+
+
+
+
+
+
+90
+
+
+Buried Deployments
+
+
+
+
+Final
+
+
+Informational
+
+
+
+
+Suhas Daftuar
+
+
+
+
+
+
+
+
+91
+
+
+Reduced threshold Segwit MASF
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+James Hilliard
+
+
+
+
+
+
+
+
+93
+
+
+codex32
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Leon Olsson Curr and Pearlwort Sneed
+
+
+Andrew Poelstra
+
+
+
+
+
+
+
+
+94
+
+
+Testnet 4
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Fabian Jahr
+
+
+
+
+
+
+
+
+98
+
+
+Fast Merkle Trees
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Mark Friedenbach
+
+
+Kalle Alm
+
+
+BtcDrak
+
+
+
+
+
+
+
+
+99
+
+
+Motivation and deployment of consensus rule changes ([soft/hard]forks)
+
+
+
+
+Rejected
+
+
+Informational
+
+
+
+
+Jorge Timón
+
+
+
+
+
+
+
+
+100
+
+
+Dynamic maximum block size by miner vote
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Jeff Garzik
+
+
+Tom Harding
+
+
+Dagur Valberg Johannsson
+
+
+
+
+
+
+
+
+101
+
+
+Increase maximum block size
+
+
+Consensus (hard fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+102
+
+
+Block size increase to 2MB
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Jeff Garzik
+
+
+
+
+
+
+
+
+103
+
+
+Block size following technological growth
+
+
+Consensus (hard fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+104
+
+
+'Block75' - Max block size like difficulty
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+t.khan
+
+
+
+
+
+
+
+
+105
+
+
+Consensus based block size retargeting algorithm
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+BtcDrak
+
+
+
+
+
+
+
+
+106
+
+
+Dynamically Controlled Bitcoin Block Size Max Cap
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Upal Chakraborty
+
+
+
+
+
+
+
+
+107
+
+
+Dynamic limit on the block size
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Washington Y. Sanchez
+
+
+
+
+
+
+
+
+109
+
+
+Two million byte size limit with sigop and sighash limits
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Gavin Andresen
+
+
+
+
+
+
+
+
+111
+
+
+NODE_BLOOM service bit
+
+
+Peer Services
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Matt Corallo
+
+
+Peter Todd
+
+
+
+
+
+
+
+
+112
+
+
+CHECKSEQUENCEVERIFY
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+BtcDrak
+
+
+Mark Friedenbach
+
+
+Eric Lombrozo
+
+
+
+
+
+
+
+
+113
+
+
+Median time-past as endpoint for lock-time calculations
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Thomas Kerin
+
+
+Mark Friedenbach
+
+
+
+
+
+
+
+
+114
+
+
+Merkelized Abstract Syntax Tree
+
+
+Consensus (soft fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Johnson Lau
+
+
+
+
+
+
+
+
+115
+
+
+Generic anti-replay protection using Script
+
+
+Consensus (soft fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+116
+
+
+MERKLEBRANCHVERIFY
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Mark Friedenbach
+
+
+Kalle Alm
+
+
+BtcDrak
+
+
+
+
+
+
+
+
+117
+
+
+Tail Call Execution Semantics
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Mark Friedenbach
+
+
+Kalle Alm
+
+
+BtcDrak
+
+
+
+
+
+
+
+
+118
+
+
+SIGHASH_ANYPREVOUT for Taproot Scripts
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Christian Decker
+
+
+Anthony Towns
+
+
+
+
+
+
+
+
+119
+
+
+CHECKTEMPLATEVERIFY
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Jeremy Rubin
+
+
+
+
+
+
+
+
+120
+
+
+Proof of Payment
+
+
+Applications
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Kalle Rosenbaum
+
+
+
+
+
+
+
+
+121
+
+
+Proof of Payment URI scheme
+
+
+Applications
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Kalle Rosenbaum
+
+
+
+
+
+
+
+
+122
+
+
+URI scheme for Blockchain references / exploration
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Marco Pontello
+
+
+
+
+
+
+
+
+123
+
+
+BIP Classification
+
+
+
+
+Active
+
+
+Process
+
+
+
+
+Eric Lombrozo
+
+
+
+
+
+
+
+
+124
+
+
+Hierarchical Deterministic Script Templates
+
+
+Applications
+
+
+Rejected
+
+
+Informational
+
+
+
+
+Eric Lombrozo
+
+
+William Swanson
+
+
+
+
+
+
+
+
+125
+
+
+Opt-in Full Replace-by-Fee Signaling
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+David A. Harding
+
+
+Peter Todd
+
+
+
+
+
+
+
+
+126
+
+
+Best Practices for Heterogeneous Input Script Transactions
+
+
+
+
+Draft
+
+
+Informational
+
+
+
+
+Kristov Atlas
+
+
+
+
+
+
+
+
+127
+
+
+Simple Proof-of-Reserves Transactions
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Steven Roose
+
+
+
+
+
+
+
+
+129
+
+
+Bitcoin Secure Multisig Setup (BSMS)
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Hugo Nguyen
+
+
+Peter Gray
+
+
+Marko Bencun
+
+
+Aaron Chen
+
+
+Rodolfo Novak
+
+
+
+
+
+
+
+
+130
+
+
+sendheaders message
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Suhas Daftuar
+
+
+
+
+
+
+
+
+131
+
+
+"Coalescing Transaction" Specification (wildcard inputs)
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Chris Priest
+
+
+
+
+
+
+
+
+132
+
+
+Committee-based BIP Acceptance Process
+
+
+
+
+Withdrawn
+
+
+Process
+
+
+
+
+Andy Chase
+
+
+
+
+
+
+
+
+133
+
+
+feefilter message
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Alex Morcos
+
+
+
+
+
+
+
+
+134
+
+
+Flexible Transactions
+
+
+Consensus (hard fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Tom Zander
+
+
+
+
+
+
+
+
+135
+
+
+Generalized version bits voting
+
+
+
+
+Rejected
+
+
+Informational
+
+
+
+
+Sancho Panza
+
+
+
+
+
+
+
+
+136
+
+
+Bech32 Encoded Tx Position References
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Велеслав
+
+
+Jonas Schnelli
+
+
+Daniel Pape
+
+
+
+
+
+
+
+
+137
+
+
+Signatures of Messages using Private Keys
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Christopher Gilliard
+
+
+
+
+
+
+
+
+140
+
+
+Normalized TXID
+
+
+Consensus (soft fork)
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Christian Decker
+
+
+
+
+
+
+
+
+141
+
+
+Segregated Witness (Consensus layer)
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Eric Lombrozo
+
+
+Johnson Lau
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+142
+
+
+Address Format for Segregated Witness
+
+
+Applications
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Johnson Lau
+
+
+
+
+
+
+
+
+143
+
+
+Transaction Signature Verification for Version 0 Witness Program
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Johnson Lau
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+144
+
+
+Segregated Witness (Peer Services)
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Eric Lombrozo
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+145
+
+
+getblocktemplate Updates for Segregated Witness
+
+
+API/RPC
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+146
+
+
+Dealing with signature encoding malleability
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Johnson Lau
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+147
+
+
+Dealing with dummy stack element malleability
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Johnson Lau
+
+
+
+
+
+
+
+
+148
+
+
+Mandatory activation of segwit deployment
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Shaolin Fry
+
+
+
+
+
+
+
+
+149
+
+
+Segregated Witness (second deployment)
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Shaolin Fry
+
+
+
+
+
+
+
+
+150
+
+
+Peer Authentication
+
+
+Peer Services
+
+
+Deferred
+
+
+Standards Track
+
+
+
+
+Jonas Schnelli
+
+
+
+
+
+
+
+
+151
+
+
+Peer-to-Peer Communication Encryption
+
+
+Peer Services
+
+
+Replaced
+
+
+Standards Track
+
+
+
+
+Jonas Schnelli
+
+
+
+
+
+
+
+
+152
+
+
+Compact Block Relay
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Matt Corallo
+
+
+
+
+
+
+
+
+154
+
+
+Rate Limiting via peer specified challenges
+
+
+Peer Services
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Karl-Johan Alm
+
+
+
+
+
+
+
+
+155
+
+
+addrv2 message
+
+
+Peer Services
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Wladimir J. van der Laan
+
+
+
+
+
+
+
+
+156
+
+
+Dandelion - Privacy Enhancing Routing
+
+
+Peer Services
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Brad Denby
+
+
+Andrew Miller
+
+
+Giulia Fanti
+
+
+Surya Bakshi
+
+
+Shaileshh Bojja Venkatakrishnan
+
+
+Pramod Viswanath
+
+
+
+
+
+
+
+
+157
+
+
+Client Side Block Filtering
+
+
+Peer Services
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Olaoluwa Osuntokun
+
+
+Alex Akselrod
+
+
+Jim Posen
+
+
+
+
+
+
+
+
+158
+
+
+Compact Block Filters for Light Clients
+
+
+Peer Services
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Olaoluwa Osuntokun
+
+
+Alex Akselrod
+
+
+
+
+
+
+
+
+159
+
+
+NODE_NETWORK_LIMITED service bit
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Jonas Schnelli
+
+
+
+
+
+
+
+
+171
+
+
+Currency/exchange rate information API
+
+
+Applications
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+172
+
+
+Define Bitcoin Subunits as Satoshis
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+OceanSlim
+
+
+
+
+
+
+
+
+173
+
+
+Base32 address format for native v0-16 witness outputs
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Greg Maxwell
+
+
+
+
+
+
+
+
+174
+
+
+Partially Signed Bitcoin Transaction Format
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+175
+
+
+Pay to Contract Protocol
+
+
+Applications
+
+
+Rejected
+
+
+Informational
+
+
+
+
+Omar Shibli
+
+
+Nicholas Gregory
+
+
+
+
+
+
+
+
+176
+
+
+Bits Denomination
+
+
+
+
+Draft
+
+
+Informational
+
+
+
+
+Jimmy Song
+
+
+
+
+
+
+
+
+177
+
+
+Redefine Bitcoin's Base Unit
+
+
+
+
+Draft
+
+
+Informational
+
+
+
+
+John Carvalho
+
+
+
+
+
+
+
+
+178
+
+
+Version Extended WIF
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Karl-Johan Alm
+
+
+
+
+
+
+
+
+179
+
+
+Name for payment recipient identifiers
+
+
+
+
+Draft
+
+
+Informational
+
+
+
+
+Emil Engler
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+180
+
+
+Block size/weight fraud proof
+
+
+Peer Services
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Luke Dashjr
+
+
+
+
+
+
+
+
+197
+
+
+Hashed Time-Locked Collateral Contract
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Matthew Black
+
+
+Tony Cai
+
+
+
+
+
+
+
+
+199
+
+
+Hashed Time-Locked Contract transactions
+
+
+Applications
+
+
+Rejected
+
+
+Standards Track
+
+
+
+
+Sean Bowe
+
+
+Daira Hopwood
+
+
+
+
+
+
+
+
+300
+
+
+Hashrate Escrows (Consensus layer)
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Paul Sztorc
+
+
+CryptAxe
+
+
+
+
+
+
+
+
+301
+
+
+Blind Merged Mining (Consensus layer)
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Paul Sztorc
+
+
+CryptAxe
+
+
+
+
+
+
+
+
+310
+
+
+Stratum protocol extensions
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Pavel Moravec
+
+
+Jan Čapek
+
+
+
+
+
+
+
+
+320
+
+
+nVersion bits for general purpose use
+
+
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+BtcDrak
+
+
+
+
+
+
+
+
+321
+
+
+URI Scheme
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Matt Corallo
+
+
+
+
+
+
+
+
+322
+
+
+Generic Signed Message Format
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Karl-Johan Alm
+
+
+
+
+
+
+
+
+324
+
+
+Version 2 P2P Encrypted Transport Protocol
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Dhruv Mehta
+
+
+Tim Ruffing
+
+
+Jonas Schnelli
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+325
+
+
+Signet
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Karl-Johan Alm
+
+
+Anthony Towns
+
+
+
+
+
+
+
+
+326
+
+
+Anti-fee-sniping in taproot transactions
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Chris Belcher
+
+
+
+
+
+
+
+
+327
+
+
+MuSig2 for BIP340-compatible Multi-Signatures
+
+
+
+
+Active
+
+
+Informational
+
+
+
+
+Jonas Nick
+
+
+Tim Ruffing
+
+
+Elliott Jin
+
+
+
+
+
+
+
+
+328
+
+
+Derivation Scheme for MuSig2 Aggregate Keys
+
+
+Applications
+
+
+Proposed
+
+
+Informational
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+329
+
+
+Wallet Labels Export Format
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Craig Raw
+
+
+
+
+
+
+
+
+330
+
+
+Transaction announcements reconciliation
+
+
+Peer Services
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Gleb Naumenko
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+331
+
+
+Ancestor Package Relay
+
+
+Peer Services
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Gloria Zhao
+
+
+
+
+
+
+
+
+337
+
+
+Compressed Transactions
+
+
+API/RPC
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Tom Briar
+
+
+
+
+
+
+
+
+338
+
+
+Disable transaction relay message
+
+
+Peer Services
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+Suhas Daftuar
+
+
+
+
+
+
+
+
+339
+
+
+WTXID-based transaction relay
+
+
+Peer Services
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Suhas Daftuar
+
+
+
+
+
+
+
+
+340
+
+
+Schnorr Signatures for secp256k1
+
+
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+Jonas Nick
+
+
+Tim Ruffing
+
+
+
+
+
+
+
+
+341
+
+
+Taproot
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+Jonas Nick
+
+
+Anthony Towns
+
+
+
+
+
+
+
+
+342
+
+
+Validation of Taproot Scripts
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+Jonas Nick
+
+
+Anthony Towns
+
+
+
+
+
+
+
+
+343
+
+
+Mandatory activation of taproot deployment
+
+
+Consensus (soft fork)
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Shinobius
+
+
+Michael Folkson
+
+
+
+
+
+
+
+
+345
+
+
+OP_VAULT
+
+
+Consensus (soft fork)
+
+
+Withdrawn
+
+
+Standards Track
+
+
+
+
+James O'Beirne
+
+
+Greg Sanders
+
+
+
+
+
+
+
+
+347
+
+
+OP_CAT in Tapscript
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Ethan Heilman
+
+
+Armin Sabouri
+
+
+
+
+
+
+
+
+348
+
+
+CHECKSIGFROMSTACK
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Brandon Black
+
+
+Jeremy Rubin
+
+
+
+
+
+
+
+
+349
+
+
+OP_INTERNALKEY
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Brandon Black
+
+
+Jeremy Rubin
+
+
+
+
+
+
+
+
+350
+
+
+Bech32m format for v1+ witness addresses
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Pieter Wuille
+
+
+
+
+
+
+
+
+351
+
+
+Private Payments
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Alfred Hodler
+
+
+Clark Moody
+
+
+
+
+
+
+
+
+352
+
+
+Silent Payments
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+josibake
+
+
+Ruben Somsen
+
+
+
+
+
+
+
+
+353
+
+
+DNS Payment Instructions
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Matt Corallo
+
+
+Bastien Teinturier
+
+
+
+
+
+
+
+
+370
+
+
+PSBT Version 2
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+371
+
+
+Taproot Fields for PSBT
+
+
+Applications
+
+
+Final
+
+
+Standards Track
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+372
+
+
+Pay-to-contract tweak fields for PSBT
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Maxim Orlovsky
+
+
+
+
+
+
+
+
+373
+
+
+MuSig2 PSBT Fields
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+374
+
+
+Discrete Log Equality Proofs
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Andrew Toth
+
+
+Ruben Somsen
+
+
+Sebastian Falbesoner
+
+
+
+
+
+
+
+
+375
+
+
+Sending Silent Payments with PSBTs
+
+
+Applications
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Andrew Toth
+
+
+Ava Chow
+
+
+josibake
+
+
+
+
+
+
+
+
+379
+
+
+Miniscript
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Andrew Poelstra
+
+
+Sanket Kanjalkar
+
+
+Antoine Poinsot
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+380
+
+
+Output Script Descriptors General Operation
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+381
+
+
+Non-Segwit Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+382
+
+
+Segwit Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+383
+
+
+Multisig Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+384
+
+
+combo() Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+385
+
+
+raw() and addr() Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+386
+
+
+tr() Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+387
+
+
+Tapscript Multisig Output Script Descriptors
+
+
+Applications
+
+
+Final
+
+
+Informational
+
+
+
+
+Pieter Wuille
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+388
+
+
+Wallet Policies for Descriptor Wallets
+
+
+Applications
+
+
+Proposed
+
+
+Standards Track
+
+
+
+
+Salvatore Ingala
+
+
+
+
+
+
+
+
+389
+
+
+Multipath Descriptor Key Expressions
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+390
+
+
+musig() Descriptor Key Expression
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Ava Chow
+
+
+
+
+
+
+
+
+431
+
+
+Topology Restrictions for Pinning
+
+
+Applications
+
+
+Draft
+
+
+Informational
+
+
+
+
+Gloria Zhao
+
+
+
+
+
+
+
+
+443
+
+
+OP_CHECKCONTRACTVERIFY
+
+
+Consensus (soft fork)
+
+
+Draft
+
+
+Standards Track
+
+
+
+
+Salvatore Ingala
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Last update: 
+2025-7-9
+
+
+This website is a mirror of the 
+official BIPs
+                repository.
+
+
+Support this project 
+donate
+
+
+Source code

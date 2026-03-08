@@ -1,0 +1,76 @@
+/* ══════════════════════════════════════════════════════
+   NORSE VISIONS v7 — SiteIntro.css
+   Single flicker stream · blur-dissolve · cyan+purple dark
+   ══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&display=swap');
+
+/* ══ Root ══════════════════════════════════════════════ */
+.si-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: none;
+  outline: none;
+  will-change: filter, opacity;
+
+  /* Dark site bg + layered purple ambience — low-key, not too much */
+  background:
+    radial-gradient(ellipse 50% 40% at 15% 18%, rgba(139, 92, 246, 0.09) 0%, transparent 65%),
+    radial-gradient(ellipse 38% 32% at 84% 78%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 28% 22% at 72% 14%, rgba(0, 212, 255, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 22% 28% at 22% 88%, rgba(80, 40, 180, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 48% at 50% 50%, rgba(22, 8, 58, 0.20) 0%, transparent 70%),
+    #04040d;
+}
+
+/* Dark vignette push towards edges */
+.si-root::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 22%, rgba(0, 0, 0, 0.80) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ══ Sketch SVG ════════════════════════════════════════ */
+.si-sketch {
+  position: relative;
+  z-index: 2;
+  width: clamp(220px, 48vmin, 440px);
+  height: clamp(264px, 58vmin, 528px);
+  opacity: 0;
+  will-change: opacity, filter, transform;
+  stroke: rgba(0, 212, 255, 0.62);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  filter:
+    drop-shadow(0 0 16px rgba(0, 212, 255, 0.28)) drop-shadow(0 0 38px rgba(139, 92, 246, 0.14));
+}
+
+/* ══ Hint ══════════════════════════════════════════════ */
+.si-hint {
+  position: absolute;
+  bottom: clamp(2rem, 5vh, 3.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(0.42rem, 0.78vw, 0.54rem);
+  letter-spacing: 0.38em;
+  color: rgba(0, 212, 255, 0.42);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 4;
+  margin: 0;
+  will-change: opacity;
+  opacity: 0;
+}

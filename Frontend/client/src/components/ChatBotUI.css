@@ -1,0 +1,975 @@
+/* ChatBotUI.css — Aether Chat Interface */
+
+/* Light mode: chatbot wrapper — blush/cream/lavender gradient page background */
+[data-theme="light"] .chatui-wrapper {
+  background:
+    radial-gradient(ellipse 120% 80% at 20% 0%, rgba(227, 106, 106, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 80% at 80% 10%, rgba(139, 92, 246, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 100% at 50% 100%, rgba(255, 178, 178, 0.12) 0%, transparent 60%),
+    linear-gradient(160deg, #ffe8f0 0%, #FFFBF1 35%, #f2ebff 65%, #FFF2D0 100%);
+}
+
+/* Light mode: chatbot container — frosted glass with rose+violet shimmer border */
+[data-theme="light"] .chatui-container {
+  background: rgba(255, 252, 248, 0.82) !important;
+  border: 1px solid rgba(192, 68, 74, 0.18) !important;
+  backdrop-filter: blur(36px) saturate(1.5) !important;
+  box-shadow:
+    0 8px 48px rgba(139, 92, 246, 0.1),
+    0 4px 16px rgba(227, 106, 106, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(180, 120, 255, 0.06) !important;
+}
+
+.chatui-wrapper {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + 2rem) 2rem 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Handling */
+.chatui-bg-image {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.4) saturate(1.2);
+}
+
+/* Background Handling */
+
+
+[data-theme="light"] .chatui-bg-image {
+  filter: brightness(0.06) saturate(0.5);
+}
+
+
+.chatui-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at center, rgba(6, 8, 26, 0.6) 0%, var(--bg-void) 100%);
+}
+
+
+[data-theme="light"] .chatui-bg-overlay {
+  background:
+    radial-gradient(ellipse 120% 80% at 20% 0%, rgba(227, 106, 106, 0.22) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 80% at 80% 10%, rgba(139, 92, 246, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 100% at 50% 100%, rgba(255, 178, 178, 0.15) 0%, transparent 60%),
+    linear-gradient(160deg, #ffe2ee 0%, #FFFBF1 32%, #f0e8ff 62%, #FFF2D0 100%);
+}
+
+
+
+.chatui-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  height: calc(100vh - var(--nav-height) - 4rem);
+  display: flex;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  /* Uses .glass and .glow-border */
+}
+
+/* ===== SIDEBAR ===== */
+.chatui-sidebar {
+  width: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  border-right: 1px solid var(--border-surface);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+[data-theme="light"] .chatui-sidebar {
+  background: linear-gradient(180deg, rgba(242, 235, 255, 0.75) 0%, rgba(255, 242, 208, 0.65) 100%);
+  backdrop-filter: blur(24px) saturate(1.3);
+  border-right: 1px solid rgba(180, 120, 255, 0.15);
+}
+
+/* Sidebar brand text in light mode */
+[data-theme="light"] .sidebar-brand {
+  color: var(--text-primary);
+}
+
+/* Quick spell suggestions in light mode */
+[data-theme="light"] .suggestions-list li {
+  background: rgba(255, 251, 241, 0.7);
+  border: 1px solid rgba(180, 120, 255, 0.12);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .suggestions-list li:hover {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.25);
+  color: var(--violet);
+}
+
+/* Chat header in light mode — rose-violet glass tint */
+[data-theme="light"] .chatui-header {
+  background: linear-gradient(90deg, rgba(255, 232, 240, 0.5) 0%, rgba(242, 235, 255, 0.5) 100%);
+  border-bottom: 1px solid rgba(180, 120, 255, 0.14);
+}
+
+/* Input area in light mode */
+[data-theme="light"] .chatui-input-wrapper {
+  background: linear-gradient(90deg, rgba(255, 240, 245, 0.6) 0%, rgba(242, 235, 255, 0.5) 100%);
+  border-top: 1px solid rgba(180, 120, 255, 0.14);
+}
+
+[data-theme="light"] .chatui-input {
+  background: rgba(255, 254, 252, 0.92);
+  border: 1px solid rgba(180, 120, 255, 0.2);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .chatui-input:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Message bubbles in light mode */
+[data-theme="light"] .message-wrapper.bot .message-bubble {
+  background: rgba(255, 252, 248, 0.92);
+  border: 1px solid rgba(180, 120, 255, 0.14);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .message-wrapper.user .message-bubble {
+  background: linear-gradient(135deg, rgba(227, 106, 106, 0.1) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid rgba(180, 120, 255, 0.2);
+  color: var(--text-primary);
+}
+
+/* Wallet connect button in light mode */
+[data-theme="light"] .btn-wallet-connect {
+  background: rgba(255, 251, 241, 0.85);
+  border: 1px solid rgba(180, 120, 255, 0.2);
+  color: var(--text-primary);
+}
+
+
+
+.sidebar-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+/* Wallet connect inside sidebar */
+.sidebar-wallet-card {
+  margin-bottom: 2.5rem;
+}
+
+.btn-wallet-connect {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-wallet-connect:hover {
+  background: var(--aurora-subtle);
+  border-color: var(--aurora-dim);
+}
+
+.btn-wallet-connect.connected {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: var(--error);
+}
+
+.btn-wallet-connect.connected:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  justify-content: center;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.wallet-status.verified {
+  color: var(--success);
+}
+
+.wallet-status.verified .status-dot {
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.wallet-status.unverified {
+  color: var(--text-muted);
+}
+
+.wallet-status.unverified .status-dot {
+  background: var(--text-muted);
+}
+
+/* Suggestions */
+.sidebar-suggestions {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.suggestions-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.suggestions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.suggestions-list li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.suggestions-list li:hover {
+  background: var(--aurora-deep);
+  border-color: var(--aurora-subtle);
+  color: var(--aurora);
+}
+
+/* ===== MAIN CHAT AREA ===== */
+.chatui-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chatui-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.chatui-heading {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.chatui-subheading {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* UNAUTH STATE */
+.chatui-unauth-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.chatui-unauth-state h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.chatui-unauth-state p {
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+/* MESSAGES */
+.chatui-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.empty-chat-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+
+.eye-orb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--aurora-bright) 0%, var(--violet) 100%);
+  filter: blur(8px);
+  opacity: 0.5;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.message-wrapper.user {
+  align-self: flex-end;
+}
+
+.message-wrapper.bot {
+  align-self: flex-start;
+}
+
+.message-bubble {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.message-wrapper.user .message-bubble {
+  background: var(--aurora-deep);
+  border: 1px solid var(--aurora-subtle);
+  border-bottom-right-radius: 4px;
+}
+
+.message-wrapper.bot .message-bubble {
+  background: var(--bg-card);
+  border: 1px solid var(--border-surface);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-img-preview {
+  max-width: 300px;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+/* Typing animation */
+.typing span {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 0;
+  color: var(--aurora);
+  animation: typing 1.4s infinite alternate;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* INPUT AREA */
+.chatui-input-wrapper {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--border-surface);
+  background: var(--bg-secondary);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chatui-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-surface);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.chatui-input:focus {
+  outline: none;
+  border-color: var(--aurora);
+  box-shadow: 0 0 15px var(--aurora-glow);
+}
+
+.chatui-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chatui-send {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-aurora);
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.chatui-send:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-aurora);
+}
+
+.chatui-send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+/* MODAL EXPORT OVERRIDE */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* RAVEN CANVAS INTRO */
+.raven-intro-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #04060e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.raven-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.raven-intro-label {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  z-index: 10;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.raven-intro-label span:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  background: linear-gradient(135deg, #00d4ff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.raven-intro-sub {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase;
+  color: rgba(100, 116, 139, 0.8) !important;
+  -webkit-text-fill-color: rgba(100, 116, 139, 0.8) !important;
+}
+
+.skip-intro-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+  padding: 0.5rem 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .chatui-wrapper {
+    padding: calc(var(--nav-height) + 1rem) 1rem 1rem;
+  }
+
+  .chatui-container {
+    flex-direction: column;
+    height: calc(100vh - var(--nav-height) - 2rem);
+  }
+
+  .chatui-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-surface);
+    padding: 1.5rem;
+    display: none;
+  }
+
+  /* Hide sidebar on mobile for now */
+  .chatui-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .chatui-messages {
+    padding: 1.5rem;
+  }
+
+  .chatui-input-wrapper {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════
+   ODIN'S EYE — RAVEN BIRD SWOOSH INTRO
+═══════════════════════════════════════ */
+
+.eye-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #03040e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Scanlines overlay */
+.eye-intro-scan {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom,
+      transparent 0px,
+      transparent 3px,
+      rgba(255, 255, 255, 0.01) 3px,
+      rgba(255, 255, 255, 0.01) 4px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle dark grid */
+.eye-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fade out */
+.eye-intro-out {
+  animation: eyeOut 0.7s ease forwards;
+}
+
+@keyframes eyeOut {
+  to {
+    opacity: 0;
+    filter: blur(14px) brightness(2.5);
+    transform: scale(1.06);
+  }
+}
+
+/* ─── Raven wrapper ─── */
+.raven-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  /* Start: tiny, very far below, behind the camera (small scale + translateY down) */
+  transform: translateY(100vh) scale(0.05) perspective(600px) translateZ(-400px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* When swoosh starts, fly to center-front */
+.raven-wrap.raven-fly {
+  animation: ravenSwoosh 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes ravenSwoosh {
+  0% {
+    transform: translateY(100vh) scale(0.06) perspective(600px) translateZ(-400px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  20% {
+    opacity: 1;
+    filter: blur(3px);
+  }
+
+  65% {
+    transform: translateY(-5vh) scale(1.25) perspective(600px) translateZ(60px);
+    filter: blur(0);
+  }
+
+  80% {
+    transform: translateY(2vh) scale(0.95) perspective(600px) translateZ(20px);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) perspective(600px) translateZ(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Raven SVG sizing */
+.raven-svg {
+  width: clamp(300px, 50vw, 580px);
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.15)) drop-shadow(0 -20px 60px rgba(225, 29, 72, 0.1));
+}
+
+/* Wing flap animations */
+.raven-left-wing {
+  transform-box: fill-box;
+  transform-origin: right center;
+  animation: wingFlapLeft 0.35s ease-in-out infinite alternate 0.1s;
+}
+
+.raven-right-wing {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: wingFlapRight 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes wingFlapLeft {
+  from {
+    transform: rotateX(0deg) scaleY(1);
+  }
+
+  to {
+    transform: rotateX(25deg) scaleY(0.85);
+  }
+}
+
+@keyframes wingFlapRight {
+  from {
+    transform: rotateX(0deg) scaleY(1);
+  }
+
+  to {
+    transform: rotateX(-25deg) scaleY(0.85);
+  }
+}
+
+/* Trail streaks — fade in after raven arrives */
+.raven-trail {
+  opacity: 0;
+  animation: trailFadeIn 0.4s ease 0.8s forwards;
+}
+
+@keyframes trailFadeIn {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 80;
+    stroke-dasharray: 80;
+  }
+
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Speed lines */
+.raven-speed-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  animation: speedLinesIn 0.3s ease 0.15s forwards,
+    speedLinesOut 0.4s ease 0.85s forwards;
+}
+
+@keyframes speedLinesIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes speedLinesOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.raven-speed-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 1px;
+  transform-origin: left center;
+  background: linear-gradient(to right, rgba(0, 212, 255, 0.4), transparent);
+}
+
+.raven-speed-line-1 {
+  width: 200px;
+  transform: rotate(-20deg) translateX(-50px) translateY(-40px);
+}
+
+.raven-speed-line-2 {
+  width: 320px;
+  transform: rotate(-10deg) translateX(-80px) translateY(-20px);
+  opacity: 0.7;
+}
+
+.raven-speed-line-3 {
+  width: 260px;
+  transform: rotate(5deg) translateX(-70px) translateY(10px);
+  opacity: 0.6;
+}
+
+.raven-speed-line-4 {
+  width: 200px;
+  transform: rotate(22deg) translateX(-50px) translateY(40px);
+}
+
+.raven-speed-line-5 {
+  width: 300px;
+  transform: rotate(-35deg) translateX(-30px) translateY(-80px);
+  opacity: 0.5;
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.4), transparent);
+}
+
+.raven-speed-line-6 {
+  width: 280px;
+  transform: rotate(35deg) translateX(-30px) translateY(80px);
+  opacity: 0.5;
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.4), transparent);
+}
+
+.raven-speed-line-7 {
+  width: 180px;
+  transform: rotate(-5deg) translateX(-90px) translateY(0px);
+  opacity: 0.4;
+  background: linear-gradient(to right, rgba(225, 29, 72, 0.3), transparent);
+}
+
+/* Label — appears after raven */
+.eye-intro-label {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.eye-intro-label.eye-label-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.eye-label-title {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  background: linear-gradient(135deg, #00d4ff 0%, #a78bfa 50%, #e11d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.4));
+}
+
+.eye-label-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(225, 29, 72, 0.6);
+  animation: eyeLabelBlink 1.2s ease-in-out 1.5s 2;
+}
+
+@keyframes eyeLabelBlink {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Skip button */
+.eye-skip-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(100, 116, 139, 0.4);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  animation: skipFadeIn 0.4s ease 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes skipFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.eye-skip-btn:hover {
+  color: rgba(225, 29, 72, 0.8);
+  border-color: rgba(225, 29, 72, 0.25);
+}
+
+/* ─── Spell pill prefix >_ ─── */
+.spell-prefix {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(0, 212, 255, 0.5);
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.spell-text {
+  flex: 1;
+}
+
+.suggestions-list li {
+  display: flex;
+  align-items: center;
+}
+
+.suggestions-list li:hover .spell-prefix {
+  color: rgba(0, 212, 255, 0.9);
+}

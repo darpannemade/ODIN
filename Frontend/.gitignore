@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.cache/
+artifacts/
+cache/
+
+# Environment — never commit secrets
+.env
+*.env
+
+# Logs & misc
+*.log
+build_output.txt
+.DS_Store
+Creds.txt

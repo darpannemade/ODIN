@@ -1,0 +1,23 @@
+{
+  "user1": {
+    "name": "Alice"
+  },
+  "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266": {
+    "name": "Darpan",
+    "favorite_crypto": "Bitcoin",
+    "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  },
+  "testuser": {
+    "name": "Odin's Eye"
+  },
+  "guest": {
+    "wallet": "0x52E0039F6D51972e461a7d60329C76ba1fDBa4DE"
+  },
+  "0x90f79bf6eb2c4f870365e785982e1f101e93b906": {
+    "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  },
+  "4HKlbqwf8GZITbQNCTNLNoBS99v1": {
+    "name": "Darpan",
+    "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+  }
+}

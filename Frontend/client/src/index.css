@@ -1,0 +1,793 @@
+/* ============================================
+   ODIN — AETHER DESIGN SYSTEM
+   "Where starlight meets the cosmic forge"
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  /* === COSMIC PALETTE === */
+  --bg-void: #04060e;
+  --bg-primary: #06081a;
+  --bg-secondary: #0b0e24;
+  --bg-tertiary: #111538;
+  --bg-elevated: #171c48;
+  --bg-card: #0d1029;
+  --bg-card-hover: #121640;
+
+  /* === AURORA (Primary) === */
+  --aurora: #00d4ff;
+  --aurora-bright: #38bdf8;
+  --aurora-dim: #0891b2;
+  --aurora-glow: rgba(0, 212, 255, 0.25);
+  --aurora-subtle: rgba(0, 212, 255, 0.08);
+  --aurora-deep: rgba(0, 212, 255, 0.04);
+
+  /* === MYSTIC VIOLET (Secondary) === */
+  --violet: #8b5cf6;
+  --violet-bright: #a78bfa;
+  --violet-dim: #6d28d9;
+  --violet-glow: rgba(139, 92, 246, 0.25);
+  --violet-subtle: rgba(139, 92, 246, 0.08);
+
+  /* === STARLIGHT GOLD (Tertiary—sparse) === */
+  --starlight: #f5c542;
+  --starlight-bright: #fbbf24;
+  --starlight-dim: #b8860b;
+  --starlight-glow: rgba(245, 197, 66, 0.2);
+  --starlight-subtle: rgba(245, 197, 66, 0.06);
+
+  /* === CRIMSON (Dramatic Accent) === */
+  --crimson: #e11d48;
+  --crimson-bright: #fb7185;
+  --crimson-dim: #9f1239;
+  --crimson-glow: rgba(225, 29, 72, 0.25);
+  --crimson-subtle: rgba(225, 29, 72, 0.08);
+
+  /* === EMBER / GOLD (Premium Accent) === */
+  --ember: #f59e0b;
+  --ember-bright: #fcd34d;
+  --ember-dim: #b45309;
+  --ember-glow: rgba(245, 158, 11, 0.3);
+  --ember-subtle: rgba(245, 158, 11, 0.08);
+
+  /* === COSMIC SUCCESS / ERROR === */
+  --success: #10b981;
+  --error: #ef4444;
+
+  /* === SURFACE === */
+  --surface-dark: #0f1228;
+  --surface: #1a1f50;
+  --surface-light: #252b6e;
+  --surface-bright: #333a80;
+
+  /* === TEXT === */
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-aurora: #00d4ff;
+  --text-violet: #a78bfa;
+  --text-starlight: #f5c542;
+
+  /* === TYPOGRAPHY === */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* === BORDERS === */
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-surface: rgba(255, 255, 255, 0.08);
+  --border-aurora: rgba(0, 212, 255, 0.3);
+  --border-violet: rgba(139, 92, 246, 0.3);
+  --border-glow: rgba(0, 212, 255, 0.15);
+
+  /* === SHADOWS === */
+  --shadow-aurora: 0 0 30px rgba(0, 212, 255, 0.12), 0 0 80px rgba(0, 212, 255, 0.04);
+  --shadow-violet: 0 0 30px rgba(139, 92, 246, 0.12), 0 0 60px rgba(139, 92, 246, 0.04);
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-deep: 0 8px 48px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.15), 0 0 40px rgba(139, 92, 246, 0.1);
+
+  /* === GRADIENTS === */
+  --gradient-aurora: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(0, 212, 255, 0.06) 0%, transparent 100%);
+  --gradient-card: linear-gradient(145deg, rgba(13, 16, 41, 0.9) 0%, rgba(11, 14, 36, 0.95) 100%);
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 212, 255, 0.08) 0%, rgba(139, 92, 246, 0.04) 40%, transparent 80%);
+  --gradient-mesh: radial-gradient(at 20% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(at 80% 30%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(245, 197, 66, 0.03) 0%, transparent 50%);
+  --gradient-bifrost: linear-gradient(135deg, #0d0620 0%, #150a35 30%, #0a1628 60%, #04060e 100%);
+  --gradient-fire: linear-gradient(135deg, #f59e0b 0%, #e11d48 50%, #8b5cf6 100%);
+  --gradient-gold: linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #b45309 100%);
+  --gradient-ember: linear-gradient(135deg, #f59e0b 0%, #fb7185 100%);
+
+  /* === EPIC SHADOWS === */
+  --shadow-epic: 0 0 60px rgba(0, 212, 255, 0.2), 0 0 120px rgba(139, 92, 246, 0.15), 0 20px 80px rgba(0, 0, 0, 0.8);
+  --shadow-ember: 0 0 30px rgba(245, 158, 11, 0.3), 0 0 60px rgba(245, 158, 11, 0.1);
+  --shadow-crimson: 0 0 30px rgba(225, 29, 72, 0.3), 0 0 60px rgba(225, 29, 72, 0.1);
+
+  /* === SPACING === */
+  --nav-height: 72px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ===== LIGHT MODE ===== */
+[data-theme="light"] {
+  /* Backgrounds — warm cream sunshine palette */
+  --bg-void: #FFFBF1;
+  --bg-primary: #FFF8E8;
+  --bg-secondary: #FFF2D0;
+  --bg-tertiary: #FFE8BA;
+  --bg-elevated: #FFFCF5;
+  --bg-card: #FFFEF9;
+  --bg-card-hover: #FFF6E3;
+
+  /* Surfaces — warm petal mid-tones */
+  --surface-dark: #f5c8c8;
+  --surface: #f0b8b8;
+  --surface-light: #eba8a8;
+  --surface-bright: #e49898;
+
+  /* Text — deep warm charcoal */
+  --text-primary: #1c1412;
+  --text-secondary: #4a3030;
+  --text-muted: #8c6b6b;
+
+  /* Borders — warm rose tint */
+  --border-subtle: rgba(227, 106, 106, 0.1);
+  --border-surface: rgba(227, 106, 106, 0.18);
+  --border-aurora: rgba(227, 106, 106, 0.28);
+
+  /* Accent — rose as primary light-mode accent */
+  --aurora: #c0444a;
+  --aurora-bright: #E36A6A;
+  --aurora-dim: rgba(227, 106, 106, 0.3);
+  --aurora-subtle: rgba(227, 106, 106, 0.1);
+  --aurora-deep: rgba(227, 106, 106, 0.05);
+  --aurora-glow: rgba(227, 106, 106, 0.2);
+  --text-aurora: #c0444a;
+
+  /* Violet — kept, harmonizes with rose */
+  --violet: #7c3aed;
+  --violet-bright: #9461f7;
+  --violet-dim: rgba(124, 58, 237, 0.2);
+  --violet-subtle: rgba(124, 58, 237, 0.07);
+
+  /* Crimson — deep rose for errors/danger */
+  --crimson: #E36A6A;
+  --crimson-bright: #FFB2B2;
+  --crimson-dim: rgba(227, 106, 106, 0.2);
+  --crimson-subtle: rgba(227, 106, 106, 0.07);
+
+  /* Ember — warm amber still present for gold accents */
+  --ember: #d97706;
+  --ember-bright: #f59e0b;
+  --ember-dim: rgba(217, 119, 6, 0.2);
+  --ember-subtle: rgba(217, 119, 6, 0.07);
+
+  /* Gradients — cream → rose */
+  --gradient-aurora: linear-gradient(135deg, #c0444a 0%, #E36A6A 50%, #FFB2B2 100%);
+  --gradient-bifrost: linear-gradient(135deg, #FFFBF1 0%, #FFF2D0 50%, #FFB2B2 100%);
+  --gradient-fire: linear-gradient(135deg, #E36A6A 0%, #c0444a 50%, #7c3aed 100%);
+  --gradient-ember: linear-gradient(135deg, #FFB2B2 0%, #E36A6A 100%);
+  --gradient-mesh:
+    radial-gradient(at 20% 20%, rgba(227, 106, 106, 0.06) 0%, transparent 50%),
+    radial-gradient(at 80% 30%, rgba(255, 178, 178, 0.05) 0%, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(255, 242, 208, 0.08) 0%, transparent 50%);
+
+  /* Shadows — warm rose-tinted */
+  --shadow-card: 0 2px 16px rgba(227, 106, 106, 0.1), 0 0 0 1px rgba(227, 106, 106, 0.07);
+  --shadow-deep: 0 8px 40px rgba(180, 83, 9, 0.08);
+  --shadow-aurora: 0 0 20px rgba(227, 106, 106, 0.2), 0 4px 16px rgba(227, 106, 106, 0.1);
+  --shadow-ember: 0 0 20px rgba(255, 178, 178, 0.25);
+  --shadow-crimson: 0 0 20px rgba(227, 106, 106, 0.25);
+  --shadow-glow: 0 0 20px rgba(227, 106, 106, 0.15), 0 0 40px rgba(255, 242, 208, 0.2);
+}
+
+/* Light mode: glass surfaces — warm frosted cream */
+[data-theme="light"] .glass {
+  background: rgba(255, 252, 245, 0.88);
+  backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(227, 106, 106, 0.12);
+}
+
+/* Light mode: glow borders — rose tint */
+[data-theme="light"] .glow-border {
+  border: 1px solid rgba(227, 106, 106, 0.18);
+  box-shadow: 0 0 24px rgba(227, 106, 106, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Light mode: hero canvas */
+[data-theme="light"] .hero-cinematic {
+  background: linear-gradient(180deg, #FFFBF1 0%, #FFF2D0 100%);
+}
+
+[data-theme="light"] .hero-cinematic::before {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(227, 106, 106, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(255, 178, 178, 0.04) 0%, transparent 60%);
+}
+
+/* Light mode: hero title uses dark ink */
+[data-theme="light"] .hero-title {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .hero-title-accent {
+  background: var(--gradient-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 15px rgba(227, 106, 106, 0.25));
+}
+
+/* Light mode: card base — warm cream white */
+[data-theme="light"] .card,
+[data-theme="light"] .glass-card {
+  background: rgba(255, 254, 249, 0.94);
+  border: 1px solid rgba(227, 106, 106, 0.1);
+  box-shadow: var(--shadow-card);
+}
+
+/* Light mode: section backgrounds */
+[data-theme="light"] .how-it-works {
+  background: linear-gradient(180deg, #FFFBF1 0%, #FFF2D0 100%);
+}
+
+[data-theme="light"] .features-bento {
+  background: #FFF2D0;
+}
+
+/* Aether line — rose gradient in light mode */
+[data-theme="light"] .aether-line {
+  background: linear-gradient(90deg, transparent, #E36A6A, transparent);
+}
+
+/* Light mode: bento cards */
+[data-theme="light"] .bento-item {
+  background: #FFFBF1;
+}
+
+/* Light mode: text utility overrides */
+[data-theme="light"] .text-aurora {
+  color: var(--aurora);
+}
+
+/* Light mode: glass surfaces — clean frosted paper */
+[data-theme="light"] .glass {
+  background: rgba(253, 252, 250, 0.88);
+  backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(30, 25, 20, 0.08);
+}
+
+/* Light mode: glow borders use amber glow */
+[data-theme="light"] .glow-border {
+  border: 1px solid rgba(180, 83, 9, 0.12);
+  box-shadow: 0 0 24px rgba(180, 83, 9, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Light mode: hero canvas */
+[data-theme="light"] .hero-cinematic {
+  background: linear-gradient(180deg, #f4f2ee 0%, #efecea 100%);
+}
+
+[data-theme="light"] .hero-cinematic::before {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(180, 83, 9, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(124, 58, 237, 0.025) 0%, transparent 60%);
+}
+
+/* Light mode: hero title uses dark ink */
+[data-theme="light"] .hero-title {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .hero-title-accent {
+  background: var(--gradient-fire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 15px rgba(180, 83, 9, 0.2));
+}
+
+/* Light mode: card base — clean paper white */
+[data-theme="light"] .card,
+[data-theme="light"] .glass-card {
+  background: rgba(253, 252, 250, 0.94);
+  border: 1px solid rgba(30, 25, 20, 0.08);
+  box-shadow: var(--shadow-card);
+}
+
+/* Light mode: section backgrounds */
+[data-theme="light"] .how-it-works {
+  background: linear-gradient(180deg, #f4f2ee 0%, #efecea 100%);
+}
+
+[data-theme="light"] .features-bento {
+  background: #efecea;
+}
+
+/* Aether line uses amber in light mode */
+[data-theme="light"] .aether-line {
+  background: linear-gradient(90deg, transparent, #b45309, transparent);
+}
+
+/* Light mode: bento cards */
+[data-theme="light"] .bento-item {
+  background: #faf9f7;
+}
+
+/* Light mode: text utility overrides */
+[data-theme="light"] .text-aurora {
+  color: var(--aurora);
+}
+
+
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+h4,
+h5,
+h6,
+p,
+span,
+label,
+button,
+a,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--aurora-dim), var(--violet-dim));
+  border-radius: 3px;
+}
+
+/* ===== GLOBAL UTILITY CLASSES ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* ===== AURORA GLOW EFFECT ===== */
+.aurora-glow {
+  box-shadow: var(--shadow-aurora);
+}
+
+/* ===== AETHER BUTTON (global primary CTA) ===== */
+.btn-aether {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--gradient-aurora);
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.22);
+  padding: 0.85rem 2.25rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow:
+    0 4px 12px rgba(0, 212, 255, 0.28),
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+}
+
+.btn-aether::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--aurora-bright), var(--violet));
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  border-radius: inherit;
+}
+
+.btn-aether:hover::before {
+  opacity: 1;
+}
+
+.btn-aether:hover {
+  box-shadow:
+    0 6px 20px rgba(0, 212, 255, 0.38),
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+  transform: translateY(-2px);
+}
+
+.btn-aether:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+  box-shadow:
+    0 1px 4px rgba(0, 212, 255, 0.2),
+    0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+}
+
+.btn-aether span,
+.btn-aether>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== RUNE BUTTON (outline style) ===== */
+.btn-rune {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--aurora);
+  background: transparent;
+  border: 1px solid var(--border-aurora);
+  border-bottom: 3px solid var(--border-aurora);
+  padding: 0.85rem 2.25rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow:
+    0 2px 8px rgba(0, 212, 255, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+.btn-rune:hover {
+  background: var(--aurora-subtle);
+  color: var(--aurora-bright);
+  box-shadow:
+    0 4px 16px rgba(0, 212, 255, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  border-color: var(--aurora);
+  transform: translateY(-1px);
+}
+
+.btn-rune:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+  box-shadow: 0 1px 2px rgba(0, 212, 255, 0.1) inset;
+}
+
+/* ===== AETHER CARD ===== */
+.aether-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.aether-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(139, 92, 246, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.aether-card:hover {
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.aether-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== GLOW BORDER CARD ===== */
+.glow-border {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-aurora);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.4;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.glow-border:hover::after {
+  opacity: 1;
+}
+
+/* ===== COSMIC DIVIDER ===== */
+.cosmic-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.cosmic-divider::before,
+.cosmic-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-surface));
+}
+
+.cosmic-divider::after {
+  background: linear-gradient(90deg, var(--border-surface), transparent);
+}
+
+/* ===== AETHER LINE (accent line) ===== */
+.aether-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-aurora);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+/* ===== PAGE TRANSITION WRAPPER ===== */
+.page-enter {
+  animation: pageEnter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ===== COSMIC MESH BACKGROUND ===== */
+.cosmic-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--gradient-mesh);
+}
+
+.cosmic-bg::before {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+  top: -250px;
+  right: -250px;
+  animation: cosmicPulse 12s ease-in-out infinite alternate;
+}
+
+.cosmic-bg::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  animation: cosmicPulse 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes cosmicPulse {
+  from {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: scale(1.4) translate(30px, -30px);
+    opacity: 1;
+  }
+}
+
+/* ===== FORGE TAG (badge) ===== */
+.forge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--aurora);
+  border: 1px solid var(--border-aurora);
+  padding: 0.3rem 0.85rem;
+  background: var(--aurora-subtle);
+  border-radius: var(--radius-sm);
+}
+
+/* ===== TOAST OVERRIDES ===== */
+.react-hot-toast {
+  font-family: var(--font-body) !important;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--aurora-glow);
+  color: var(--text-primary);
+}
+
+/* ===== FOCUS RING ===== */
+:focus-visible {
+  outline: 2px solid var(--aurora);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== GLASS CARD UTILITY ===== */
+.glass {
+  background: rgba(6, 8, 26, 0.6);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+}
+
+/* ===== NOISE TEXTURE OVERLAY ===== */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ===== SHIMMER LOADING ===== */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-tertiary) 50%, var(--bg-card) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ===== FLOAT ANIMATION ===== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== GLOBAL FORM INPUTS ===== */
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-surface);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+  transition: all var(--transition-fast);
+  outline: none;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--aurora);
+  box-shadow: 0 0 0 3px var(--aurora-subtle), var(--shadow-aurora);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}

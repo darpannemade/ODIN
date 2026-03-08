@@ -1,0 +1,728 @@
+/* NFThome.css — Bifrost Premium Redesign */
+
+/* ═══ PAGE WRAPPER ═══ */
+.bifrost-page {
+  min-height: 100vh;
+  background: var(--bg-void);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ═══ HERO ═══ */
+.bifrost-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+
+/* Full-bleed gradient mesh behind hero */
+.bifrost-hero-mesh {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-bifrost);
+  z-index: 0;
+  transition: background 0.4s ease;
+}
+
+/* Content sits above orbs */
+.bifrost-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bifrost-hero-mesh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 40%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 70% at 80% 60%, rgba(0, 212, 255, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 10%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+  transition: background 0.4s ease;
+}
+
+/* Scanline overlay */
+.bifrost-hero-mesh::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 3px,
+      rgba(139, 92, 246, 0.012) 3px,
+      rgba(139, 92, 246, 0.012) 4px);
+  pointer-events: none;
+}
+
+/* ─── Animated Aurora Orbs ─── */
+.bifrost-aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.bifrost-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, rgba(80, 30, 200, 0.12) 40%, transparent 70%);
+  top: -15%;
+  left: -15%;
+  animation: orbDrift1 14s ease-in-out infinite;
+}
+
+.bifrost-orb-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.22) 0%, rgba(0, 150, 200, 0.08) 40%, transparent 70%);
+  bottom: 5%;
+  right: -10%;
+  animation: orbDrift2 18s ease-in-out infinite;
+}
+
+.bifrost-orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(245, 100, 11, 0.18) 0%, rgba(200, 60, 0, 0.08) 40%, transparent 70%);
+  top: 35%;
+  left: 45%;
+  animation: orbDrift3 22s ease-in-out infinite;
+}
+
+/* ─── Keyframes ─── */
+@keyframes orbDrift1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(80px, 40px) scale(1.08);
+  }
+
+  66% {
+    transform: translate(30px, -50px) scale(0.95);
+  }
+}
+
+@keyframes orbDrift2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  40% {
+    transform: translate(-60px, -30px) scale(1.05);
+  }
+
+  70% {
+    transform: translate(50px, 40px) scale(0.92);
+  }
+}
+
+@keyframes orbDrift3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-40px, 60px) scale(1.1);
+  }
+}
+
+/* ═══ HERO INNER CONTENT ═══ */
+.bifrost-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 720px;
+  padding-top: calc(var(--nav-height) + 3rem);
+  padding-bottom: 4rem;
+}
+
+.bifrost-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aurora-strip {
+  width: 32px;
+  height: 2px;
+  background: var(--gradient-aurora);
+  border-radius: 2px;
+}
+
+/* Pulse dot (reuse global) */
+.pulse-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--aurora);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--aurora);
+  animation: pulseDot 2s infinite;
+  margin-right: 0.4rem;
+}
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+/* ─── Mega Title ─── */
+.bifrost-mega-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.bifrost-title-sub {
+  display: block;
+  background: var(--gradient-aurora);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px var(--aurora-glow));
+}
+
+/* ─── Hero Description ─── */
+.bifrost-hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  max-width: 540px;
+}
+
+/* ─── CTA Row ─── */
+.bifrost-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Stats Row ─── */
+.bifrost-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-surface);
+  flex-wrap: wrap;
+}
+
+.bifrost-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bifrost-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: var(--gradient-aurora);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bifrost-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stat-sep {
+  width: 1px;
+  height: 32px;
+  background: var(--border-surface);
+}
+
+/* ═══ AURORA DIVIDER ═══ */
+.aurora-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+}
+
+.aurora-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-surface), transparent);
+}
+
+.aurora-divider-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ═══ GALLERY SECTION ═══ */
+.bifrost-gallery {
+  padding: 0 0 4rem;
+}
+
+.bifrost-gallery-track {
+  cursor: grab;
+}
+
+.bifrost-gallery-track:active {
+  cursor: grabbing;
+}
+
+.bifrost-gallery-rail {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 2rem 1.5rem;
+  width: max-content;
+}
+
+/* ─── 3D Tilt Card ─── */
+.bifrost-tilt-card {
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+.bifrost-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bifrost-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bifrost-tilt-card:hover .bifrost-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.bifrost-card-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+}
+
+.bifrost-card-info {
+  padding: 1rem 1.1rem 1.25rem;
+}
+
+.bifrost-card-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.bifrost-card-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bifrost-card-price-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.bifrost-card-price-val {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--aurora);
+}
+
+.bifrost-card-badge {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.badge-sold {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-muted);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.badge-live {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-rare {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--aurora);
+  border: 1px solid var(--border-aurora);
+}
+
+.badge-epic {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--violet);
+  border: 1px solid var(--border-violet);
+}
+
+.badge-myth {
+  background: rgba(245, 197, 66, 0.1);
+  color: var(--starlight);
+  border: 1px solid rgba(245, 197, 66, 0.2);
+}
+
+/* ═══ REALMS SECTION ═══ */
+.bifrost-realms {
+  padding: 2rem 0 6rem;
+}
+
+.realms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.realm-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  text-decoration: none;
+  padding: 2.5rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    border-color 0.35s ease;
+  gap: 1.25rem;
+}
+
+.realm-card:hover {
+  transform: translateY(-14px);
+}
+
+.realm-aurora:hover {
+  box-shadow: 0 24px 60px rgba(0, 212, 255, 0.2), var(--shadow-deep);
+  border-color: var(--border-aurora);
+}
+
+.realm-violet:hover {
+  box-shadow: 0 24px 60px rgba(139, 92, 246, 0.2), var(--shadow-deep);
+  border-color: var(--border-violet);
+}
+
+.realm-ember:hover {
+  box-shadow: 0 24px 60px rgba(245, 158, 11, 0.2), var(--shadow-deep);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+/* Glow panel — sits at the bottom, expands on hover */
+.realm-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  transform: scaleY(0.6);
+  transform-origin: bottom center;
+}
+
+.realm-aurora .realm-card-glow {
+  background: radial-gradient(ellipse 100% 80% at 50% 110%, rgba(0, 212, 255, 0.22) 0%, rgba(0, 212, 255, 0.08) 40%, transparent 72%);
+}
+
+.realm-violet .realm-card-glow {
+  background: radial-gradient(ellipse 100% 80% at 50% 110%, rgba(139, 92, 246, 0.28) 0%, rgba(139, 92, 246, 0.10) 40%, transparent 72%);
+}
+
+.realm-ember .realm-card-glow {
+  background: radial-gradient(ellipse 100% 80% at 50% 110%, rgba(245, 158, 11, 0.28) 0%, rgba(245, 158, 11, 0.10) 40%, transparent 72%);
+}
+
+.realm-card:hover .realm-card-glow {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.realm-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.realm-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.realm-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.realm-card-body {
+  flex: 1;
+}
+
+.realm-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.realm-aurora .realm-title {
+  color: var(--aurora);
+}
+
+.realm-violet .realm-title {
+  color: var(--violet-bright);
+}
+
+.realm-ember .realm-title {
+  color: var(--ember);
+}
+
+.realm-sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.realm-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.realm-cta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.realm-card:hover .realm-cta {
+  color: var(--text-primary);
+}
+
+.realm-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+}
+
+.realm-aurora:hover .realm-arrow {
+  background: var(--aurora);
+  border-color: var(--aurora);
+  color: #000;
+}
+
+.realm-violet:hover .realm-arrow {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+}
+
+.realm-ember:hover .realm-arrow {
+  background: var(--ember);
+  border-color: var(--ember);
+  color: #000;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1024px) {
+  .realms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bifrost-hero-inner {
+    padding-top: calc(var(--nav-height) + 2rem);
+  }
+
+  .bifrost-mega-title {
+    font-size: 2.5rem;
+  }
+
+  .realms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bifrost-gallery-rail {
+    padding: 1rem 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .bifrost-tilt-card {
+    width: 180px;
+  }
+
+  .bifrost-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bifrost-stats-row {
+    gap: 1.25rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   LIGHT MODE OVERRIDES
+═══════════════════════════════════════════ */
+
+/* Hero mesh — rich blush/violet/cream gradient */
+[data-theme="light"] .bifrost-hero-mesh {
+  background: linear-gradient(135deg,
+      #ffffff 0%,
+      #ffffff 20%,
+      #ffc1c130 45%,
+      #FFF2D0 70%,
+      #ffbfe5 100%);
+}
+
+[data-theme="light"] .bifrost-hero-mesh::before {
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 40%, rgba(192, 68, 74, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 70% at 85% 55%, rgba(124, 58, 237, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 5%, rgba(255, 178, 178, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 50% at 30% 85%, rgba(180, 130, 255, 0.1) 0%, transparent 50%);
+}
+
+[data-theme="light"] .bifrost-hero-mesh::after {
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 3px,
+      rgba(192, 68, 74, 0.008) 3px,
+      rgba(192, 68, 74, 0.008) 4px);
+}
+
+/* Orbs — violet + rose + lavender for light mode */
+[data-theme="light"] .bifrost-orb-1 {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(192, 68, 74, 0.06) 40%, transparent 70%);
+}
+
+[data-theme="light"] .bifrost-orb-2 {
+  background: radial-gradient(circle, rgba(227, 106, 106, 0.18) 0%, rgba(255, 178, 178, 0.06) 40%, transparent 70%);
+}
+
+[data-theme="light"] .bifrost-orb-3 {
+  background: radial-gradient(circle, rgba(180, 120, 255, 0.16) 0%, rgba(139, 92, 246, 0.05) 40%, transparent 70%);
+}
+
+/* Text overrides for light hero */
+[data-theme="light"] .bifrost-mega-title {
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+[data-theme="light"] .bifrost-hero-desc {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .bifrost-stat-label {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .bifrost-stats-row {
+  border-top-color: var(--border-surface);
+}
+
+[data-theme="light"] .aurora-divider-label {
+  color: var(--text-muted);
+}
+
+/* Cards */
+[data-theme="light"] .bifrost-tilt-card {
+  background: var(--bg-card);
+  border-color: var(--border-surface);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .bifrost-card-price-val {
+  color: var(--aurora);
+}
+
+/* Realm cards in light mode */
+[data-theme="light"] .realm-card {
+  background: var(--bg-card);
+  border-color: var(--border-surface);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .realm-card-footer {
+  border-top-color: var(--border-subtle);
+}
+
+[data-theme="light"] .realm-aurora .realm-title {
+  color: #3fcbff;
+}

@@ -1,0 +1,101 @@
+/* AdminDashboard.css — Sentinel Console */
+
+.admin-shell {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  background: var(--bg-void);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.admin-sidebar {
+  width: 260px;
+  height: calc(100vh - var(--nav-height));
+  position: fixed;
+  left: 0;
+  top: var(--nav-height);
+  border-right: 1px solid var(--border-surface);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background: rgba(6, 8, 26, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.admin-nav {
+  flex: 1;
+}
+
+.admin-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.admin-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.admin-nav-btn.active {
+  background: var(--aurora-deep);
+  border-color: var(--aurora-dim);
+  color: var(--aurora-bright);
+}
+
+.admin-nav-btn.active svg {
+  opacity: 1;
+}
+
+/* MAIN CONTENT */
+.admin-main {
+  flex: 1;
+  margin-left: 260px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  height: calc(100vh - var(--nav-height));
+}
+
+.admin-coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .admin-shell {
+    flex-direction: column;
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
+
+  .admin-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-surface);
+  }
+
+  .admin-main {
+    margin-left: 0;
+    height: auto;
+  }
+}

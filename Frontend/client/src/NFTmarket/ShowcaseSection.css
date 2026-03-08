@@ -1,0 +1,338 @@
+/* ShowcaseSection.css — Bifrost Full-Bleed Masonry */
+
+.showcase-wrapper {
+  padding: 2rem 0 8rem;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, var(--bg-void) 0%, var(--bg-primary) 100%);
+  border-top: 1px solid var(--border-surface);
+}
+
+.showcase-header {
+  margin-bottom: 4rem;
+}
+
+.showcase-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.showcase-label::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--border-surface);
+}
+
+.showcase-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.showcase-subtext {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ═══ MASONRY GRID ═══ */
+.showcase-masonry {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 480px;
+  gap: 1.25rem;
+}
+
+/* Card base */
+.showcase-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Color variant shadows */
+.showcase-aurora:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 212, 255, 0.12);
+}
+
+.showcase-fire:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(245, 158, 11, 0.12);
+}
+
+.showcase-violet:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.12);
+}
+
+/* ═══ FULL-BLEED IMAGE ═══ */
+.showcase-img-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.showcase-img-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+  filter: brightness(0.5) saturate(1.3) contrast(1.1);
+}
+
+.showcase-card:hover .showcase-img-bg img {
+  transform: scale(1.04);
+  filter: brightness(0.35) saturate(1.5) contrast(1.15);
+}
+
+.showcase-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(4, 6, 14, 0.96) 0%,
+      rgba(4, 6, 14, 0.6) 40%,
+      rgba(4, 6, 14, 0.2) 70%,
+      transparent 100%);
+  transition: background 0.4s ease;
+}
+
+/* Light mode: brighter images, warm tone, visible content */
+[data-theme="light"] .showcase-img-bg img {
+  filter: brightness(0.72) saturate(1.0) contrast(1.0);
+}
+
+[data-theme="light"] .showcase-card:hover .showcase-img-bg img {
+  filter: brightness(0.55) saturate(1.1) contrast(1.05);
+}
+
+[data-theme="light"] .showcase-img-overlay {
+  background: linear-gradient(to top,
+      rgba(20, 12, 6, 0.92) 0%,
+      rgba(20, 12, 6, 0.55) 35%,
+      rgba(20, 12, 6, 0.18) 65%,
+      transparent 100%);
+}
+
+/* Force white text on showcase cards — always visible over dark image overlay */
+[data-theme="light"] .showcase-title,
+[data-theme="light"] .showcase-desc,
+[data-theme="light"] .showcase-num,
+[data-theme="light"] .showcase-sub-tag,
+[data-theme="light"] .showcase-cta {
+  color: rgba(255, 255, 255, 0.95);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Keep accent CTAs colored */
+[data-theme="light"] .showcase-aurora .showcase-cta {
+  color: #7ee8ff;
+}
+
+[data-theme="light"] .showcase-fire .showcase-cta {
+  color: #fcd34d;
+}
+
+[data-theme="light"] .showcase-violet .showcase-cta {
+  color: #c4b5fd;
+}
+
+/* Make body more visible by default (no hover required) */
+[data-theme="light"] .showcase-body {
+  opacity: 0.85;
+  transform: translateY(4px);
+}
+
+[data-theme="light"] .showcase-card:hover .showcase-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer border and arrow in light mode */
+[data-theme="light"] .showcase-footer {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] .showcase-arrow-wrap {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ═══ CONTENT LAYER ═══ */
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Top bar */
+.showcase-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: auto;
+}
+
+.showcase-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.showcase-sub-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+
+/* Body — slides up on hover */
+.showcase-body {
+  transform: translateY(12px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+
+.showcase-card:hover .showcase-body {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.showcase-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.showcase-aurora .showcase-title {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.showcase-fire .showcase-title {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.showcase-violet .showcase-title {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.showcase-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+/* Footer */
+.showcase-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.showcase-cta {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.showcase-aurora .showcase-cta {
+  color: var(--aurora);
+}
+
+.showcase-fire .showcase-cta {
+  color: var(--ember);
+}
+
+.showcase-violet .showcase-cta {
+  color: var(--violet-bright);
+}
+
+.showcase-arrow-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+}
+
+.showcase-aurora:hover .showcase-arrow-wrap {
+  background: var(--aurora);
+  border-color: var(--aurora);
+  color: #000;
+}
+
+.showcase-fire:hover .showcase-arrow-wrap {
+  background: var(--ember);
+  border-color: var(--ember);
+  color: #000;
+}
+
+.showcase-violet:hover .showcase-arrow-wrap {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1024px) {
+  .showcase-masonry {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 360px 360px;
+  }
+
+  /* First card spans full width on tablet */
+  .showcase-masonry .showcase-card:first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcase-masonry {
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px 320px 320px;
+  }
+
+  .showcase-masonry .showcase-card:first-child {
+    grid-column: span 1;
+  }
+}

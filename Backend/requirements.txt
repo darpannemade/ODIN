@@ -1,0 +1,18 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+openai
+tiktoken
+langchain
+langchain-community
+faiss-cpu
+requests
+apscheduler
+web3
+eth-account
+transformers
+sentence-transformers
+torch --index-url https://download.pytorch.org/whl/cpu
+numpy
+pydantic
+# Note: llama-cpp-python only needed if using local models (not needed for remote/OpenRouter)

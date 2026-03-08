@@ -1,0 +1,113 @@
+.manage-nft-container {
+  padding: 2rem;
+  color: white;
+  font-family: 'Modrenize', sans-serif;
+  padding-top: 8rem;
+}
+
+.nft-section {
+  margin-bottom: 4rem;
+}
+
+.nft-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.nft-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nft-image {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.nft-details p {
+  margin: 0.25rem 0;
+}
+
+.nft-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nft-input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.nft-btn {
+  background-color: #7a35d8;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nft-btn:hover {
+  background-color: #8e06e9;
+}
+
+.nft-unlist {
+  background-color: #d83c3c;
+}
+
+.nft-unlist:hover {
+  background-color: #e85a5a;
+}
+
+.manage-nft-loading {
+  text-align: center;
+  margin-top: 4rem;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+.withdraw-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.withdraw-section h3 {
+  margin-bottom: 1rem;
+}
+
+.withdraw-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.withdraw-section button:hover:enabled {
+  background-color: #2563eb;
+}
+
+.withdraw-section button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}

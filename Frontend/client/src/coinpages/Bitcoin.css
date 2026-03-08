@@ -1,0 +1,173 @@
+.btc-container {
+  display: flex;
+  gap: 3rem;
+  padding: 7rem 2rem;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+.btc-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.btc-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Modrenize', sans-serif;
+}
+
+.btc-desc {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+   font-family: '42dotSans', sans-serif;
+}
+.btc-links{
+  transition: all 0.3s ease-in-out;
+}
+.btc-tag:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.btc-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  font-family: '42dotSans', sans-serif;
+}
+
+.btc-tag {
+  padding: 0.5rem 1rem;
+  background: #e5e7eb;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: '42dotSans', sans-serif;
+}
+
+
+.btc-explore-card {
+  background: #450570;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-top: 4rem;
+}
+
+.explore-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Modrenize', sans-serif;
+}
+
+.explore-desc {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: '42dotSans', sans-serif;
+}
+
+.explore-btn {
+  background: #ececec;
+  color: rgb(131, 14, 240);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.explore-btn:hover{
+   transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+.btc-right {
+  flex: 3;
+  min-width: 500px;
+}
+
+.btc-price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btc-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btc-change.green {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.btc-change.red {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.btc-chart-container {
+  margin-bottom: 2rem;
+  height: 400px;
+  background: #0f172a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.MarketStat{
+  font-family: 'Modrenize', sans-serif;
+}
+.btc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.btc-stats-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.btc-stats-grid li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.btc-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #9315fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Modrenize';
+  src: url('./Moderniz.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gyrotrope';
+  src: url('./Gyrotrope.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '42dotSans';
+  src: url('./42dotSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ONDER';
+  src: url('./ONDER.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AVFon';
+  src: url('./AVFontimer.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

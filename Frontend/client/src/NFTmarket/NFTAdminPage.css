@@ -1,0 +1,281 @@
+/* NFTAdminPage.css - Sleek, Modern UI Theme */
+
+.admin-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-family: 'Modrenize', sans-serif;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(130, 0, 255, 0.3);
+  margin-top: 5rem;
+}
+
+.admin-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.admin-fee-section {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(130, 0, 255, 0.15);
+  max-width: 400px;
+  width: 100%;
+}
+
+.admin-fee-section label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+.admin-fee-section input {
+  width: 95%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.admin-fee-section button {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #a64eff, #9145f3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-fee-section button:hover {
+  background: linear-gradient(to right, #7a3ce9, #7e30d6);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.admin-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-6px);
+}
+
+.admin-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.admin-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.admin-card p {
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  margin: 0.3rem 0;
+}
+
+.admin-card .btn-red,
+.admin-card .btn-green {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-red {
+  background-color: #e53935;
+  border: none;
+}
+
+.btn-green {
+  background-color: #8e24aa;
+  background-image: linear-gradient(to right, #a64eff, #9145f3);
+}
+
+.btn-green:hover {
+  background-image: linear-gradient(to right, #7a3ce9, #7e30d6);
+}
+.btn-red:hover {
+  background-image: linear-gradient(to right, #992626, #ce1d35);
+}
+.admin-withdraw-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.admin-withdraw-section h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.admin-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.admin-withdraw-section button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-withdraw-section button:hover:enabled {
+  background-color: #2563eb;
+}
+
+.admin-withdraw-section button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.btn-pause {
+  background-color: #e74c3c;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-pause:hover {
+  background-color: #c0392b;
+}
+
+.btn-unpause {
+  background-color: #2ecc71;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-unpause:hover {
+  background-color: #27ae60;
+}
+
+/* Access Control Section */
+.access-control {
+  margin-top: 4rem;
+}
+
+.access-control h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.access-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(130, 0, 255, 0.1);
+}
+
+.access-table th,
+.access-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+    padding: 8px;
+  vertical-align: middle;
+}
+
+.access-table th {
+  background-color: #2a2a2a;
+  text-align: left;
+  font-weight: 600;
+}
+
+.access-table td button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.alert-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-settings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.access-table .btn-green,
+.access-table .btn-red {
+  margin-right: 10px; /* Adds space between buttons */
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+}
+
+.access-table .btn-green:last-child,
+.access-table .btn-red:last-child {
+  margin-right: 0; /* Prevents extra spacing on last button */
+}
+
+.access-table td button {
+  margin-bottom: 6px; /* Adds vertical spacing if stacked */
+}
+
+@media screen and (max-width: 768px) {
+  .access-table td button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
