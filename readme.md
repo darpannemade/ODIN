@@ -1,9 +1,6 @@
-# 🧠 ODIN — AI-Powered NFT Marketplace (BlockDAG Hackathon)
+# 🧠 ODIN — AI-Powered NFT Marketplace 
 
-A full-stack NFT marketplace dApp that embeds an AI-powered chatbot capable of understanding crypto and executing blockchain actions like minting, buying, and transferring NFTs — deployed on the **BlockDAG Testnet**.
-
-**0x993Ec779f00D473dB2AA322acFE2Bc650b06c722 (Our Deployed Address on Blockdag Testnet)**
-
+Demo link - https://darpannemade-odin.vercel.app/
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🚀 Features
